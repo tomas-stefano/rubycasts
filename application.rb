@@ -1,15 +1,21 @@
 require 'rubygems'
 require 'sinatra'
 require 'erb'
+require 'helpers'
+require 'haml'
 
 set :root, File.dirname(__FILE__)
 set :views, Proc.new { File.join(root, "views") }
 set :public, Proc.new { File.join(root, "public") }
 
+helpers do
+	include Rubycasts::Helpers
+end
+
 not_found do
-  erb :not_found
+  haml :not_found
 end
 
 get '/' do
-  erb :home
+  haml :home
 end
