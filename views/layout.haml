@@ -1,0 +1,29 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title Sinatra Template
+    %link{:href => "/stylesheets/application.css", :rel => "stylesheet"}/
+    /[if IE] <script>var e=("abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video").split(',');for(var i=0;i<e.length;i++){document.createElement(e[i]);}</script>
+  %body
+    #contaider
+      %section#social
+      %ul
+        %li#feeds Feeds
+        %li#twitter Twitter
+        %li#facebook Facebook
+        %li#contato Contato
+      %header
+        %hgroup
+      %h1#site-name Rubycasts
+      %nav
+      %ul
+        %li Home
+        %li Videos
+        %li Sobre
+        %li Contato
+      %section#content
+      = yield
+      %footer
+      %p Rubycasts.com &copy Alguns direitos reservados
+    %script{:src => "/javascripts/application.js"}
