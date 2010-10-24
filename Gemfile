@@ -1,10 +1,9 @@
-source :gemcutter
-gem 'sinatra'
-gem 'thin',:group => :development
-gem 'rspec', "=1.3.0", :group => :test
-gem 'rack-test', :group => :test
-gem 'test-unit', '=1.2.3', :group => :test
+source :rubygems
 gem 'cucumber', :group => :test
 gem 'webrat', :group => :test
 gem 'haml'
 gem 'sinatra-helpers'
+gem 'sinatra', '>= 1.0'
+gem 'thin', '>= 1.2.7'
+gem 'rspec', '>= 2.0.1'
+gem 'rack-test', :require => 'rack/test'

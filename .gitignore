@@ -3,3 +3,12 @@
 Gemfile.lock
 .bundle
 .rvmrc
+log/
+.emacs-project
+*~
+doc/
+coverage/
+tmp/
+config/database.yml
+db/schema.rb
+.bundle/

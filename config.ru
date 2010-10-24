@@ -1,2 +1,4 @@
-require File.dirname(__FILE__) + '/application'
+#!/usr/bin/env ruby
+
+require 'application'
 run Sinatra::Application
