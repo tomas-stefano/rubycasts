@@ -1,0 +1,15 @@
+.teamMember img {
+  border: 1px #000;
+}
+
+.iconTwitter {
+  background: url('../public/images/twitter.png');
+}
+
+.iconEmail {
+  background: url('../public/images/email.png')
+}
+
+.iconRss {
+  background: url('../public/images/rss.png')
+}
