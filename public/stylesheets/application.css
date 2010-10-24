@@ -1,0 +1,33 @@
+
+ul {
+	list-style: disc outside none;
+}
+
+ol, ul, li {
+	list-style:none outside none;
+}
+
+#header {
+	background: none repeat scroll 0 0 #FEFEFE;
+	height: 105px;
+}
+
+.top {
+	clear: both;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 980px;
+}
+
+#header div#logo {
+	float: left;
+}
+
+#current-episode.episode {
+	display: block;
+}
+
+.current-video-episode {
+	float: right;
+}
+

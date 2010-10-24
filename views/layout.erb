@@ -2,22 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>Rubycasts</title>
-    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/application.css" type="text/css" media="screen" charset="utf-8">
   </head>
   
   <body>
-    <div>
-      <h1>RubyCasts(Aqui vai o Logo!)</h1>
-    </div>
-
-    <ul>
-      <li><a href="/index">Home</a></li>
-      <li><a href="videos">Vídeos</a></li>
-      <li><a href="/about">Sobre</a></li>
-      <li><a href="/contact">Contato</a></li>
-    </ul>
-
-    <div id="content">
+	
+	<div class='header'>
+		<div class='top'>
+			<div id='logo'>
+				Logo!!! Rubycasts!
+			</div>
+			<div class="menu-rubycasts">
+				<ul id="menu">
+					<li>Home</li>
+					<li>Episódios</li>
+					<li>Sobre</li>
+					<li>Contato</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+    <div id="page-content">
       <%= yield %>
     </div>
   
