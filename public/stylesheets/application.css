@@ -1,6 +1,8 @@
 
 ul {
-	list-style: disc outside none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 ol, ul, li {
@@ -10,6 +12,14 @@ ol, ul, li {
 #header {
 	background: none repeat scroll 0 0 #FEFEFE;
 	height: 105px;
+}
+
+#menu {
+	float: right;
+}
+
+#menu li {
+	float: left;
 }
 
 .top {
@@ -31,3 +41,16 @@ ol, ul, li {
 	float: right;
 }
 
+.last-episode {
+	background: url(/images/header.jpg) repeat scroll 50% 0 transparent;
+}
+
+.episode-description {
+	color: white;
+}
+
+.footer-content {
+	background: url(/images/footer.jpg) no-repeat scroll 50% 0 transparent;
+	min-width: 980px;
+	padding: 0 0 20px;
+}
