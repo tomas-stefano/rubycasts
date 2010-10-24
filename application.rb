@@ -1,8 +1,10 @@
-require 'rubygems'
 require 'sinatra'
+require 'erb'
+
+set :root, File.dirname(__FILE__)
 
 class RubyCasts
   get '/' do
-    'Hello World'
+    erb :index
   end
 end
