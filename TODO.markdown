@@ -1,6 +1,6 @@
 # TODO
 
-* Criar a pagina de Sobre
+* Criar a pagina de Sobre (Adicionar fotos/informações do Duke e do Marcio!)
 * Criar a pagina de Contato
 * Criar a autenticação de cada membro da equipe do RubyCasts! w00t!
 * Subir um video nosso - Armazenar!
