@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
-require 'erb'
+require 'haml'
+require 'sass'
 require 'helpers'
 require 'dm-core'
 require 'dm-migrations'
