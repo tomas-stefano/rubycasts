@@ -11,4 +11,5 @@ coverage/
 tmp/
 config/database.yml
 db/schema.rb
+db/test.db
 .bundle/
