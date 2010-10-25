@@ -12,3 +12,4 @@ gostaria de ver (que seja diferente do dela)
 * Criar a aba Feedback (super importante!)
 * Criar o feed do rubycasts
 * Criar o Logo!!
+* Testar user com Factory Girl (não consegui, da erro no Factory)
