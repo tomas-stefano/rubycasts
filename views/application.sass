@@ -15,7 +15,7 @@ body
   font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif
   font-size: 12px
 
-a
+html > body a
   color: $azul
 
 #social
@@ -85,5 +85,14 @@ footer
 
 
 
-#stickies
-  margin-bottom: 40px
+#members
+  .about 
+    ul
+      list-style: none
+      li
+        float: left
+        margin: 0 10px 0 0
+        padding: 2px 0 2px 25px
+        //background: url("../images/social.png") no-repeat left center
+        &.twitter
+          background-position: -29px 0
