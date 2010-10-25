@@ -23,7 +23,6 @@ class RubyCasts
   set :root, File.dirname(__FILE__)
   set :environment, 'development'
   set :views, Proc.new { File.join(root, "views") }
-  set :views, Proc.new { File.join(root, "views") }
   set :public, Proc.new { File.join(root, "public") }
 
   helpers do
