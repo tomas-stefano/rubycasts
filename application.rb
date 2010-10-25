@@ -37,9 +37,13 @@ class RubyCasts
     haml :about
   end
 
-	get '/stylesheets/application.css' do
-		content_type "text/css"
-		sass :application
-	end
+  get '/admin/upload' do
+      haml :upload
+  end
+
+  get '/stylesheets/application.css' do
+    content_type "text/css"
+    sass :application
+  end
 
 end

@@ -15,5 +15,5 @@ group :test do
   gem 'cucumber'
   gem 'webrat'
   gem 'rspec', '>= 2.0.1'
-  gem 'rack-test', :require => 'rack/test'  
+  gem 'rack-test', :require => 'rack/test'
 end

@@ -1,0 +1,16 @@
+%h2 Upload video
+
+%form{ :action => "admin/upload", :method => "post", :enctype => "multipart/form-data" }
+  %fieldset
+    %ol
+      %li
+        %label{ :for => "name" } Name:
+        %input{ :type => "text", :name => "name"}
+      %li
+        %label{ :for => "description" } Description:
+        %input{ :type => "text", :name => "description" }
+      %li
+        %label{ :for => "file"} File:      
+        %input{ :type => "file", :name => "file" }
+      %li
+        %input{ :type => "submit", :value => "Upload" }
