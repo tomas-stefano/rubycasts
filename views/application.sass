@@ -1,5 +1,5 @@
-$vermelho = "#D62219"
-$azul = "#3D6797"
+$vermelho: unquote("#D62219")
+$azul: unquote("#3D6797")
 
 footer, section, header, nav
   display: block
@@ -17,7 +17,6 @@ body
 
 a
   color: $azul
-#container
 
 #social
   margin-top: 10px
@@ -61,6 +60,13 @@ nav ul
       color: #000
       text-decoration: none
 
+#container
+  h2
+    margin: 0 0 5px 0
+    line-height: 30px
+    font-family: Geogia, Palatino, 'Times New Roman', Times, serif
+  p 
+    font-size: 13px
 footer
   border-top: 1px solid black
   padding: 10px 0 0 0
