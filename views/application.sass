@@ -1,13 +1,22 @@
+$vermelho = "#D62219"
+$azul = "#3D6797"
+
 footer, section, header, nav
   display: block
-  /*	border: 1px solid blue
-   *i
+
+@font-face
+  font-family: "Days"
+  src: local('Days')
+  src: url('/fonts/Days.otf') format('opentype')
 
 body
+  background: #FFF
   border: 0
   font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif
   font-size: 12px
 
+a
+  color: $azul
 #container
 
 #social
@@ -34,16 +43,20 @@ body
 header
   margin-bottom: 30px
   h1
-    font: normal 40px Georgia, Palatino, 'Times New Roman', Times, serif
+    font: normal 48px "Days",Georgia, Palatino, 'Times New Roman', Times, serif
+    text-shadow: 1px 1px 1px #888
+    color: $vermelho
 
 nav ul
-  margin: 15px 0 0 0
+  margin: 18px 0 0 0
   list-style: none
   li
     float: left
     margin: 0 0 0 25px
     width: auto
     font-size: 16px
+    &:first-child
+      margin: 0 0 0 80px
     a
       color: #000
       text-decoration: none
