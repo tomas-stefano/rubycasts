@@ -31,11 +31,11 @@ class RubyCasts
   end
 
   get '/' do
-    erb :index
+    haml :index
   end
 
   get '/about' do
-    erb :about
+    haml :about
   end
 
 end
