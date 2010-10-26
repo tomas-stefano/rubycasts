@@ -12,7 +12,7 @@
 %br.clear
 %div{:id => "envie_video"}
 	%h3 Envie seu screencats
-	%form{:class => "grid_6 alpha"}
+	%form{:class => "grid_6 alpha", :action => "/"}
 		%div.input	
 			%label{:for => "name"} Nome: 
 			%input{:id => "name"}
@@ -25,11 +25,16 @@
 		%div.input	
 			%label{:for => "description"} Descrição: 
 			%textarea{:id => "description"}
+		%div.input	
+			%label{:for => "sugest"} Sugestão:
+			%textarea{:id => "sugest", :placeholder => "Tem alguma sugestão para nosso primeiro screencast?"}
+
 		%input{:type => "submit"}
 	%div{:class => "grid_4 omega"}
 		%p 
-			Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-			ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-			velit esse cillum dolore eu fugiat nulla pariatur.	Excepteur sint occaecat cupidatat non proident, sunt in
-			culpa qui officia deserunt mollit anim id est laborum
-
+			Nesse primeiro momentoo queremos que comunidade rubista envie seus 
+			screencats para ser o Primeiro Episodio do rubycasts
+			Para enviar seu screencats basta hospeda-lo em algun site e colocar a url
+			do video, no formulario ao lado. Não esqueça de deixar uma sugestão sobre
+			qual tema gostaria de ver nos proximos episodios do <strong>Rubycasts</strong>
+	%br.clear

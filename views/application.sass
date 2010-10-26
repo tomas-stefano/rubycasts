@@ -16,7 +16,8 @@ body
 	font-size: 12px
 
 body h3
-	font-size: 23px
+	font-size: 20px
+
 
 html > body a
 	color: $azul
@@ -102,22 +103,27 @@ footer
 					background-position: -29px 0
 
 #envie_video
+	margin-bottom: 20px
 	form
+		input
+			&[type='submit']
+				float: right
 		.input
 			padding: 5px 0
 			input
 				width: 350px
 				padding: 4px 2px
 				font-size: 16px
-				&[type='submit']
-					float: right
 			label
 				float: left
 				width: 100px
 				font-size: 16px
 			textarea
+				font-size: 16px
+				color: #000
+				padding: 4px 2px
 				width: 354px
 				height: 200px
 	h3
-		@extent #container h2
 		font-variant: normal
+		font-family: Geogia, Palatino, 'Times New Roman', Times, serif
