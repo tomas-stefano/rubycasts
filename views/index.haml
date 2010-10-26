@@ -1,10 +1,35 @@
 %div{:id => "current_video"}
-  %div{:class => "info grid_4 alpha" }
-    %h2 Hackety Hack, why the lucky stiff
-    %p
-      Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in
-      culpa qui officia deserunt mollit anim id est laborum
-  %div{:class => "grid_6 omega"}
-    %iframe{:src=>"http://player.vimeo.com/video/5047563?byline=0&amp;portrait=0&amp;color=D62219", :width=>"460", :height=>"253", :frameborder=>"0"}
+	%div{:class => "info grid_4 alpha" }
+		%h2 Hackety Hack, why the lucky stiff
+		%p
+			Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+			ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+			velit esse cillum dolore eu fugiat nulla pariatur.	Excepteur sint occaecat cupidatat non proident, sunt in
+			culpa qui officia deserunt mollit anim id est laborum
+	%div{:class => "grid_6 omega"}
+		%iframe{:src=>"http://player.vimeo.com/video/5047563?byline=0&amp;portrait=0&amp;color=D62219", :width=>"460", :height=>"253", :frameborder=>"0"}
+	%br.clear
+%br.clear
+%div{:id => "envie_video"}
+	%h3 Envie seu screencats
+	%form{:class => "grid_6 alpha"}
+		%div.input	
+			%label{:for => "name"} Nome: 
+			%input{:id => "name"}
+		%div.input	
+			%label{:for => "email"} Email: 
+			%input{:id => "email"}
+		%div.input	
+			%label{:for => "url"}	URL: 
+			%input{:id => "url"}
+		%div.input	
+			%label{:for => "description"} Descrição: 
+			%textarea{:id => "description"}
+		%input{:type => "submit"}
+	%div{:class => "grid_4 omega"}
+		%p 
+			Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+			ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+			velit esse cillum dolore eu fugiat nulla pariatur.	Excepteur sint occaecat cupidatat non proident, sunt in
+			culpa qui officia deserunt mollit anim id est laborum
+

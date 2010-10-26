@@ -2,97 +2,120 @@ $vermelho: unquote("#D62219")
 $azul: unquote("#3D6797")
 
 footer, section, header, nav
-  display: block
+	display: block
 
 @font-face
-  font-family: "Days"
-  src: local('Days')
-  src: url('/fonts/Days.otf') format('opentype')
+	font-family: "Days"
+	src: local('Days')
+	src: url('/fonts/Days.otf') format('opentype')
 
 body
-  background: #FFF
-  border: 0
-  font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif
-  font-size: 12px
+	background: #FFF
+	border: 0
+	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif
+	font-size: 12px
 
 html > body a
-  color: $azul
+	color: $azul
 
 #social
-  margin-top: 10px
-  margin-bottom: 40px
-  ul
-    list-style: none
-    margin: 0
-  li
-    float: left
-    margin-left: 10px
-    width: 24px
-    height: 24px
-    background: url("../images/social.png") no-repeat
-    text-indent: -5000px
-    &#feeds
-      margin-left: 45px
-      background-position: 0 0
-    &#twitter
-      background-position: -29px 0
-    &#facebook
-      background-position: -58px 0
+	margin-top: 10px
+	margin-bottom: 40px
+	ul
+		list-style: none
+		margin: 0
+	li
+		float: left
+		margin-left: 10px
+		width: 24px
+		height: 24px
+		background: url("../images/social.png") no-repeat
+		text-indent: -5000px
+		&#feeds
+			margin-left: 45px
+			background-position: 0 0
+		&#twitter
+			background-position: -29px 0
+		&#facebook
+			background-position: -58px 0
 
 header
-  margin-bottom: 30px
-  h1
-    font: normal 48px "Days",Georgia, Palatino, 'Times New Roman', Times, serif
-    text-shadow: 1px 1px 1px #888
-    color: $vermelho
+	margin-bottom: 30px
+	h1
+		font: normal 48px "Days",Georgia, Palatino, 'Times New Roman', Times, serif
+		text-shadow: 1px 1px 1px #888
+		color: $vermelho
 
 nav ul
-  margin: 18px 0 0 0
-  list-style: none
-  li
-    float: left
-    margin: 0 0 0 25px
-    width: auto
-    font-size: 16px
-    &:first-child
-      margin: 0 0 0 80px
-    a
-      color: #000
-      text-decoration: none
+	margin: 18px 0 0 0
+	list-style: none
+	li
+		float: left
+		margin: 0 0 0 25px
+		width: auto
+		font-size: 16px
+		&:first-child
+			margin: 0 0 0 80px
+		a
+			color: #000
+			text-decoration: none
 
 #container
-  h2
-    margin: 0 0 5px 0
-    line-height: 30px
-    font-family: Geogia, Palatino, 'Times New Roman', Times, serif
-  p 
-    font-size: 13px
+	h2
+		margin: 0 0 5px 0
+		line-height: 30px
+		font-family: Geogia, Palatino, 'Times New Roman', Times, serif
+	p 
+		font-size: 13px
 footer
-  border-top: 1px solid black
-  padding: 10px 0 0 0
-  p
-    color: #000
-  ul
-    @extend #social
-    margin: 0
-    li
-      &#feeds
-        margin-left: 48px
+	border-top: 1px solid black
+	padding: 10px 0 0 0
+	p
+		color: #000
+	ul
+		@extend #social
+		margin: 0
+		li
+			&#feeds
+				margin-left: 48px
 
 
 
 
-
+#envie_video
+	margin-top: 30px
 
 
 #members
-  .about 
-    ul
-      list-style: none
-      li
-        float: left
-        margin: 0 10px 0 0
-        padding: 2px 0 2px 25px
-        //background: url("../images/social.png") no-repeat left center
-        &.twitter
-          background-position: -29px 0
+	.about 
+		ul
+			list-style: none
+			li
+				float: left
+				margin: 0 10px 0 0
+				padding: 2px 0 2px 25px
+				//background: url("../images/social.png") no-repeat left center
+				&.twitter
+					background-position: -29px 0
+
+#envie_video
+	form
+		.input
+			padding: 5px 0
+			input
+				width: 350px
+				padding: 4px 2px
+				font-size: 16px
+				&[type='submit']
+					float: right
+			label
+				float: left
+				width: 100px
+				font-size: 16px
+			textarea
+				width: 354px
+				height: 200px
+	h3
+		font-size: 15px
+		font-variant: normal
+ 
