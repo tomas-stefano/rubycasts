@@ -37,6 +37,10 @@ class RubyCasts
     haml :about
   end
 
+	get '/contact' do
+		haml :contact
+	end
+
   get '/admin/upload' do
       haml :upload
   end
