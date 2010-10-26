@@ -1,3 +1,6 @@
+current_dir = File.expand_path(File.dirname(__FILE__))
+$LOAD_PATH.unshift(current_dir) unless $LOAD_PATH.include?(current_dir)
+
 require 'config/application'
 
 # It's good to decide how tools we shall use!
@@ -50,4 +53,17 @@ class RubyCasts
     sass :application
   end
 
+  post '/proposta' do
+    proposta = DmProposta.new
+    proposta.attributes(params)
+    
+    if proposta.valid?
+      proposta.save
+      env['x-rack.flash'][:notice]  = '<p>Preencha os campos obrigatorios.</p>'
+    else
+      env['x-rack.flash'][:notice]  = '<p class="error">Preencha os campos obrigatorios.</p>'
+      redirect '/'
+    end  
+    
+  end
 end
