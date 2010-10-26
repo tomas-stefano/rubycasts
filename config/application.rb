@@ -9,9 +9,12 @@ require 'digest/sha1'
 require 'rack-flash'
 require 'sinatra-authentication'
 
+
 # To install postgresql in Mac Os X run:
 #
 # sudo brew install postgresql
 #
 DataMapper.setup(:default, "postgres://localhost/rubycasts")
 DataMapper.auto_migrate!
+
+require 'lib/models/dm-proposta'

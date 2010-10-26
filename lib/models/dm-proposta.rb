@@ -1,6 +1,6 @@
 class DmProposta
   include DataMapper::Resource
-
+  
   property :id, Serial
   property :name, String
   property :email, String
@@ -10,5 +10,5 @@ class DmProposta
   
   attr_accessor :id, :name, :email, :url, :description
 
-  validates_presence_of :url, :email, :name
+  validates_presence_of :url, :email, :name, :description
 end
