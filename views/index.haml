@@ -12,22 +12,24 @@
 %br.clear
 %div{:id => "envie_video"}
 	%h3 Envie seu screencats
-	%form{:class => "grid_6 alpha", :action => "/"}
+	%form{:class => "grid_6 alpha", :action => "/proposta", :method => "post"}
+		%div.notice
+			= env['x-rack.flash'][:notice]
 		%div.input	
-			%label{:for => "name"} Nome: 
-			%input{:id => "name"}
+			%label{:for => "name"} Nome: * 
+			%input{:id => "name", :name => "name"}
 		%div.input	
-			%label{:for => "email"} Email: 
-			%input{:id => "email"}
+			%label{:for => "email"} Email: *
+			%input{:id => "email", :name => "email"}
 		%div.input	
-			%label{:for => "url"}	URL: 
-			%input{:id => "url"}
+			%label{:for => "url"}	URL: *
+			%input{:id => "url", :name => "url"}
 		%div.input	
-			%label{:for => "description"} Descrição: 
-			%textarea{:id => "description"}
+			%label{:for => "description"} Descrição: *
+			%textarea{:id => "description", :name => "description"}
 		%div.input	
 			%label{:for => "sugest"} Sugestão:
-			%textarea{:id => "sugest", :placeholder => "Tem alguma sugestão para nosso primeiro screencast?"}
+			%textarea{:id => "sugest", :name => "sugest", :placeholder => "Tem alguma sugestão para nosso primeiro screencast?"}
 
 		%input{:type => "submit"}
 	%div{:class => "grid_4 omega"}
