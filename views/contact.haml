@@ -1,12 +1,23 @@
 #contact
-  %form
-    %div.input
-      %label{:for => "nome"} Nome
-      %input{:id  => "nome"}
-    %div.input
-      %label{:for => "email"} Email
-      %input{:id  => "email"}
-    %div.input
-      %label{:for => "message"} Mensagem
-      %textarea{:id  => "message"}
-    %input{:type => "submit"}
+	%h2 Contato
+	%form{:class => "grid_6 alpha"}
+		%div.input
+			%label{:for => "nome"} Nome: 
+			%input{:id	=> "nome"}
+		%div.input
+			%label{:for => "email"} Email: 
+			%input{:id	=> "email"}
+		%div.input
+			%label{:for => "message"} Mensagem: 
+			%textarea{:id	=> "message"}
+		%input{:type => "submit"}
+	%div{:class => "grid_4 omega"}
+		%p
+		%ul
+			%li
+				%a tomas_stefano@rubycasts.com.br
+			%li 
+				%a duke@rubycasts.com.br
+			%li
+				%a marcio@rubycats.com.br
+	%br.clear
