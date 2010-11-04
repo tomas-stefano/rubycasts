@@ -17,4 +17,4 @@ require 'sinatra-authentication'
 DataMapper.setup(:default, "postgres://localhost/rubycasts")
 DataMapper.auto_migrate!
 
-require 'lib/models/dm-proposta'
+Dir["models/*rb"].each { |model_file| require model_file }

@@ -34,11 +34,13 @@ describe Sinatra::Application do
     end
 
     it "should return logout page" do
+      pending
       get '/logout'
       last_response.should be_ok
     end
 
     it "should return users page" do
+      pending
       get '/users'
       last_response.should be_ok
     end
