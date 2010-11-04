@@ -1,4 +1,4 @@
-class Episodio
+class Episode
   include DataMapper::Resource
 
   property :id, Serial
