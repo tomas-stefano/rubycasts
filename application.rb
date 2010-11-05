@@ -39,10 +39,10 @@ class RubyCasts
   get '/about' do
     haml :about
   end
-
-	get '/contact' do
-		haml :contact
-	end
+  
+  get '/contact' do
+    haml :contact
+  end
 
   get '/admin/upload' do
       haml :upload
@@ -59,6 +59,7 @@ class RubyCasts
     if proposta.valid?
       proposta.save
       env['x-rack.flash'][:notice]  = '<p>Proposta enviada com sucesso.</p>'
+      redirect '/'
     else
       env['x-rack.flash'][:notice]  = '<p class="error">Preencha os campos obrigatorios.</p>'
       redirect '/'
