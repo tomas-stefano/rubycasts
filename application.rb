@@ -61,7 +61,11 @@ class RubyCasts
       env['x-rack.flash'][:notice]  = '<p>Proposta enviada com sucesso.</p>'
       redirect '/'
     else
-      env['x-rack.flash'][:notice]  = '<p class="error">Preencha os campos obrigatorios.</p>'
+      errors = []
+      proposta.errors.each do |e|
+        errors << "#{e}<br />"
+      end
+      env['x-rack.flash'][:notice]  =  "<p class=\"error\">#{errors}</p>"
       redirect '/'
     end  
     
