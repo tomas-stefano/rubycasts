@@ -54,12 +54,11 @@ class RubyCasts
   end
 
   post '/proposta' do
-    proposta = DmProposta.new
-    proposta.attributes(params)
+    proposta = Proposta.new(params)
     
     if proposta.valid?
       proposta.save
-      env['x-rack.flash'][:notice]  = '<p>Preencha os campos obrigatorios.</p>'
+      env['x-rack.flash'][:notice]  = '<p>Proposta enviada com sucesso.</p>'
     else
       env['x-rack.flash'][:notice]  = '<p class="error">Preencha os campos obrigatorios.</p>'
       redirect '/'

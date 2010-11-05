@@ -1,14 +1,11 @@
 class Proposta
   include DataMapper::Resource
   
-  property :id, Serial
-  property :name, String
-  property :email, String
-  property :url, String
-  property :description, Text
-  property :sugest, Text
+  property :id,           Serial
+  property :name,         String, :required => true
+  property :email,        String, :required => true
+  property :url,          String, :required => true
+  property :description,  Text,   :required => true
+  property :sugest,       Text
   
-  attr_accessor :id, :name, :email, :url, :description
-
-  validates_presence_of :url, :email, :name, :description
 end
