@@ -3,21 +3,6 @@ $LOAD_PATH.unshift(current_dir) unless $LOAD_PATH.include?(current_dir)
 
 require 'config/application'
 
-# It's good to decide how tools we shall use!
-
-# This is my opinion:
-#
-# ORM: Datamapper
-# Database: PostgreSQL
-# Views: Erb
-# 
-
-# I put this choices in Gemfile. 
-# Let's decide together and modified if is really necessary.
-
-# Persist the videos?
-# I don't know for sure, but let's start with this choice.
-
 class RubyCasts
 
   use Rack::Session::Cookie, :secret => "heyhihello"
@@ -45,7 +30,7 @@ class RubyCasts
   end
 
   get '/admin/upload' do
-      haml :upload
+    haml :upload
   end
 
   get '/stylesheets/application.css' do

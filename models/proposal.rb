@@ -1,4 +1,4 @@
-class Proposta
+class Proposal
   include DataMapper::Resource
   
   property :id,           Serial

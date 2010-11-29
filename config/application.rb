@@ -9,7 +9,6 @@ require 'digest/sha1'
 require 'rack-flash'
 require 'sinatra-authentication'
 
-
 Dir["models/*.rb"].each { |model_file| require model_file }
 
 # To install postgresql in Mac Os X run:
