@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'application'
+period_dir = File.expand_path('.')
+$LOAD_PATH.unshift(period_dir) unless $LOAD_PATH.include?(period_dir)
+require 'config/application'
+
 run Sinatra::Application

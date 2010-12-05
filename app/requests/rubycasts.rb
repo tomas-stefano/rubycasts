@@ -8,9 +8,9 @@ class RubyCasts
   use Rack::Session::Cookie, :secret => "heyhihello"
   use Rack::Flash
 
-  set :root, File.dirname(__FILE__)
+  set :root, File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
   set :environment, 'development'
-  set :views, Proc.new { File.join(root, "views") }
+  set :views, Proc.new { File.join(root, 'app', "views") }
   set :public, Proc.new { File.join(root, "public") }
 
   helpers do

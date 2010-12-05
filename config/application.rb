@@ -2,14 +2,33 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'sass'
-require 'helpers'
 require 'dm-core'
 require 'dm-migrations'
 require 'digest/sha1'
 require 'rack-flash'
 require 'sinatra-authentication'
 
-Dir["models/*.rb"].each { |model_file| require model_file }
+class Application
+  class Configuration
+    def load_paths=(dirs)
+      dirs.each do |dir|
+        directory = File.expand_path(dir)
+        $LOAD_PATH.unshift(directory) unless $LOAD_PATH.include?(directory)
+        Dir["#{directory}/*.rb"].each { |file| require file }
+      end
+    end
+  end
+  
+  def self.config
+    yield Configuration.new
+  end
+end
+
+Application.config do |config|
+  config.load_paths = %w(. app/models app/helpers app/views app/requests)  
+end
+
+# Dir["models/*.rb"].each { |model_file| require model_file }
 
 # To install postgresql in Mac Os X run:
 #
