@@ -28,8 +28,6 @@ Application.config do |config|
   config.load_paths = %w(. app/models app/helpers app/views app/requests)  
 end
 
-# Dir["models/*.rb"].each { |model_file| require model_file }
-
 # To install postgresql in Mac Os X run:
 #
 # sudo brew install postgresql
