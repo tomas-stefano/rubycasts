@@ -11,10 +11,11 @@ gem 'dm-migrations'
 gem 'dm-postgres-adapter'
 gem 'sinatra-authentication'
 
+
 group :test do
   gem 'cucumber'
-  gem 'webrat'
   gem 'rspec', '2.1.0'
   gem 'rack-test', :require => 'rack/test'
   gem 'infinity_test', '1.0.2'
+  gem 'capybara'
 end
