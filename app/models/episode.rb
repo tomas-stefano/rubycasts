@@ -9,7 +9,7 @@ class Episode
 
   attr_accessor :id, :name, :email, :url, :description
 
-  validates_presence_of :link
-  validates_presence_of :email
+  # validates_presence_of :link
+  # validates_presence_of :email
 
 end

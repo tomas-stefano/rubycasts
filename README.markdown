@@ -4,9 +4,10 @@ This is the code used in the RubyCasts site ;)
 
 ## License
 
-Software License Agreement (BSD License)
+Software License Agreement
 
 Copyright (c) 2010 - RubyCasts - Tomás D'Stefano
+
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,

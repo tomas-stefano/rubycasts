@@ -6,7 +6,6 @@ require 'dm-core'
 require 'dm-migrations'
 require 'digest/sha1'
 require 'rack-flash'
-require 'sinatra-authentication'
 
 class Application
   class Configuration

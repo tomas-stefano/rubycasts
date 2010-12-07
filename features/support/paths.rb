@@ -15,7 +15,7 @@ module NavigationHelpers
     when /upload/
       '/episodes/new'
     when /logged_in/
-      '/login'
+      '/sign_in/rubycasts'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
