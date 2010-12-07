@@ -1,0 +1,8 @@
+#sign_in
+   %form{ :action => "sign_in_rubycasts", :method => "post"}
+      %fieldset
+         %label{ :for => "Login" } Login:
+         %input{ :type => "text", :name => "Login"}
+         %label{ :for => "Password" } Password:
+         %input{ :type => "text", :name => "Password"}
+         %input{ :type => 'submit', :value => 'Sign in'}

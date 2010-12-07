@@ -12,6 +12,11 @@ Feature: Upload video
     When I upload a video
     Then I should see the video in the rubycats page
   
+ Scenario: Should return a error message when not pass a video file
+   Given I am logged in
+   When I upload a video without a file
+   Then I should see "You need to pass a file to upload! =p"
+ 
   Scenario: See the six latest episodes in the root page
     Given I have seven episodes:
 	| rvm      | Ruby Version Manager                |

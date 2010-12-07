@@ -7,4 +7,12 @@ infinity_test do
     puts
     system('cucumber features')
   end
+  heuristics do
+    add('^features/*/*') do |file|
+      run :all => :tests
+    end
+    add('^app/*/(.*)\.rb') do |file|
+      run :all => :tests
+    end
+  end
 end

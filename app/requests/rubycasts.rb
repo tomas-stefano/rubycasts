@@ -5,7 +5,7 @@ require 'config/application'
 
 class RubyCasts
 
-  use Rack::Session::Cookie, :secret => "heyhihello"
+  use Rack::Session::Cookie, :secret => "3dd410929706203fe6fe008ca1cc721450609746"
   use Rack::Flash
 
   set :root, File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
@@ -36,6 +36,10 @@ class RubyCasts
   get '/stylesheets/application.css' do
     content_type "text/css"
     sass :application
+  end
+
+  get '/sign_in/rubycasts' do
+    haml :sign_in
   end
 
   post '/proposta' do
