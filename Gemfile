@@ -8,7 +8,9 @@ gem 'sinatra', '>= 1.0'
 gem 'thin', '>= 1.2.7'
 gem 'dm-core'
 gem 'dm-migrations'
+gem 'dm-validations'
 gem 'dm-postgres-adapter'
+gem 'rack-flash'
 
 group :test do
   gem 'cucumber'

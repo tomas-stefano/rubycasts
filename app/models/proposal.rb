@@ -3,7 +3,7 @@ class Proposal
   
   property :id,           Serial
   property :name,         String, :required => true
-  property :email,        String, :required => true, :format => :email_address
+  property :email,        String, :required => true
   property :url,          String, :required => true
   property :description,  Text,   :required => true
   property :sugest,       Text

@@ -4,6 +4,7 @@ require 'haml'
 require 'sass'
 require 'dm-core'
 require 'dm-migrations'
+require 'dm-validations'
 require 'digest/sha1'
 require 'rack-flash'
 
