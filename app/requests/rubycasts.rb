@@ -38,10 +38,6 @@ class RubyCasts
     sass :application
   end
 
-  get '/sign_in/rubycasts' do
-    haml :sign_in
-  end
-
   post '/proposta' do
     proposta = Proposta.new(params)
     
@@ -59,4 +55,12 @@ class RubyCasts
     end  
     
   end
+
+  module Authentication
+    get '/sign_in/rubycasts' do
+      haml :sign_in
+    end
+  end
+  include Authentication
+  
 end

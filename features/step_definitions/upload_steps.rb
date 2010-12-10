@@ -8,6 +8,10 @@ When /^I upload a video$/ do
   pending # express the regexp above with the code you wish you had
 end
 
+When /^I upload a video without a file$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
 Then /^I should not see the video in the rubycats page$/ do
   pending # express the regexp above with the code you wish you had
 end
