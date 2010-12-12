@@ -7,6 +7,7 @@ require 'dm-migrations'
 require 'dm-validations'
 require 'digest/sha1'
 require 'rack-flash'
+require 'logger'
 
 class Application
   class Configuration
@@ -18,14 +19,14 @@ class Application
       end
     end
   end
-  
+
   def self.config
     yield Configuration.new
   end
 end
 
 Application.config do |config|
-  config.load_paths = %w(. app/models app/helpers app/views app/requests)  
+  config.load_paths = %w(. app/models app/helpers app/views app/requests)
 end
 
 # To install postgresql in Mac Os X run:

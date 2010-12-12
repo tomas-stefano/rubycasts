@@ -1,18 +1,11 @@
-current_dir = File.expand_path(File.dirname(__FILE__))
-$LOAD_PATH.unshift(current_dir) unless $LOAD_PATH.include?(current_dir)
-
-require 'config/application'
+require File.expand_path('config/application')
+require 'authentication'
+require 'settings'
 
 class RubyCasts
-
-  use Rack::Session::Cookie, :secret => "3dd410929706203fe6fe008ca1cc721450609746"
-  use Rack::Flash
-
-  set :root, File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
-  set :environment, 'development'
-  set :views, Proc.new { File.join(root, 'app', "views") }
-  set :public, Proc.new { File.join(root, "public") }
-
+  include Authentication
+  include Settings
+  
   helpers do
     include Rubycasts::Helpers
   end
@@ -39,28 +32,20 @@ class RubyCasts
   end
 
   post '/proposta' do
-    proposta = Proposta.new(params)
-    
-    if proposta.valid?
-      proposta.save
-      env['x-rack.flash'][:notice]  = '<p>Proposta enviada com sucesso.</p>'
-      redirect '/'
-    else
-      errors = []
-      proposta.errors.each do |e|
-        errors << "#{e}<br />"
-      end
-      env['x-rack.flash'][:notice]  =  "<p class=\"error\">#{errors}</p>"
-      redirect '/'
-    end  
-    
+    # proposta = Proposta.new(params)
+    #     
+    # if proposta.valid?
+    #   proposta.save
+    #   env['x-rack.flash'][:notice]  = '<p>Proposta enviada com sucesso.</p>'
+    #   redirect '/'
+    # else
+    #   errors = []
+    #   proposta.errors.each do |e|
+    #     errors << "#{e}<br />"
+    #   end
+    #   env['x-rack.flash'][:notice]  =  "<p class=\"error\">#{errors}</p>"
+    #   redirect '/'
+    # end
   end
 
-  module Authentication
-    get '/sign_in/rubycasts' do
-      haml :sign_in
-    end
-  end
-  include Authentication
-  
 end
