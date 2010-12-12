@@ -4,6 +4,6 @@ module Authentication
     haml :sign_in
   end
   post '/sign_in_rubycasts' do
-    
+    'Sign in!'
   end
 end

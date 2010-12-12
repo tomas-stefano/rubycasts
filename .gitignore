@@ -4,6 +4,7 @@ Gemfile.lock
 .bundle
 .rvmrc
 log/
+logs/
 .emacs-project
 *~
 doc/
