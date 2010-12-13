@@ -1,6 +1,5 @@
 require File.expand_path('config/application')
 require 'authentication'
-require 'settings'
 
 class RubyCasts
   include Authentication
@@ -29,6 +28,10 @@ class RubyCasts
   get '/stylesheets/application.css' do
     content_type "text/css"
     sass :application
+  end
+  
+  get '/upload_episode' do
+    haml :upload_episode
   end
 
   post '/proposta' do

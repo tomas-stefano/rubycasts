@@ -5,7 +5,10 @@ Given /^I have seven episodes:$/ do |table|
 end
 
 When /^I upload a video$/ do
-  pending # express the regexp above with the code you wish you had
+  click_link('Upload Episode')
+  fill_in('title', :with => 'RubyCasts =]')
+  fill_in('description', :with => 'I will talk about RubyCasts')
+  attach_file('episode_video', :with => video_episode_file)
 end
 
 When /^I upload a video without a file$/ do

@@ -22,11 +22,6 @@ describe Sinatra::Application do
       get '/about'
       last_response.should be_ok
     end
-    
-    it "should return upload page" do
-      get '/admin/upload'
-      last_response.should be_ok
-    end
 
   end
 end

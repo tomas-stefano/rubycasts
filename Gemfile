@@ -11,6 +11,7 @@ gem 'dm-migrations'
 gem 'dm-validations'
 gem 'dm-postgres-adapter'
 gem 'rack-flash'
+gem 'carrierwave'
 
 group :test do
   gem 'cucumber'

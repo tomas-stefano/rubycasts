@@ -8,10 +8,10 @@ infinity_test do
     system('cucumber features')
   end
   heuristics do
-    add('^features/*/*') do |file|
+    add('^features/*/(.*).feature') do |file|
       run :all => :tests
     end
-    add('^app/*/(.*)\.rb') do |file|
+    add('^app/*/(.*).rb') do |file|
       run :all => :tests
     end
   end
