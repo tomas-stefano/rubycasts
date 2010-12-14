@@ -1,10 +1,16 @@
 
 module Authentication
-  get '/sign_in/rubycasts' do
-    haml :sign_in
+  use Rack::Session::Cookie
+  
+  use OmniAuth::Builder do
+    provider :github, RubyCasts::Configuration["client_id"], RubyCasts::Configuration["secret"]
   end
-  post '/try_to_login' do
-    flash[:notice] = "Sign in!"
-    haml :dashboard
+  
+  enable :sessions
+
+  get 'auth/:name/callback' do
+    auth = request.env["omniauth.auth"]
+    "Worked!"
   end
+
 end

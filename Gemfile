@@ -12,6 +12,8 @@ gem 'dm-validations'
 gem 'dm-postgres-adapter'
 gem 'rack-flash'
 gem 'carrierwave'
+gem 'i18n'
+gem 'omniauth'
 
 group :test do
   gem 'cucumber'

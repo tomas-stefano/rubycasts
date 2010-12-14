@@ -23,6 +23,9 @@ class RubyCasts
   
   class Configuration
     
+    CONFIGURATION_FILE = File.join(File.dirname(__FILE__), 'configurations.yml')
+    CONFIGURATIONS = YAML.load_file(CONFIGURATION_FILE)
+
     # Pass many strings that will be include in the load path and require
     # all ruby files in the specified dir
     #
@@ -39,6 +42,10 @@ class RubyCasts
     def datamapper(adapter_name, options)
       DataMapper.setup(adapter_name, options)
       DataMapper.auto_migrate!
+    end
+    
+    def self.[](key)
+      CONFIGURATIONS[key]
     end
     
   end
