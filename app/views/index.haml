@@ -1,3 +1,13 @@
+#current_video
+	- unless @episodes.empty?
+		- @episode = @episodes.shift
+		%h3
+			= @episode.title
+		%span
+			= @episode.description
+		%span
+			= "Duration: #{@episode.duration}"
+
 / %div{:id => "current_video"}
 / 	%div{:class => "info grid_4 alpha" }
 / 		%h2 Hackety Hack, why the lucky stiff

@@ -1,17 +1,14 @@
 #!/usr/bin/env ruby
 infinity_test do
   use :test_framework => :rspec
-  after(:all) do
-    puts
-    puts 'Running Cucumber features'
-    puts
-    system('cucumber features')
-  end
   heuristics do
     add('^features/*/(.*).feature') do |file|
       run :all => :tests
     end
     add('^app/*/(.*).rb') do |file|
+      run :all => :tests
+    end
+    add('^config/*/(.*).rb') do |file|
       run :all => :tests
     end
   end

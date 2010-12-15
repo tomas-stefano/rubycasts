@@ -1,0 +1,16 @@
+#sign_in
+   %form{ :action => "/episodes/create", :method => "post"}
+      %fieldset
+         #title
+            %label{ :for =>  "title" } Title:
+            %input{ :type => "text", :name => "title"}
+         #description
+            %label{ :for =>  "description" } Description:
+            %input{ :type => "text", :name => "description"}
+         #video_uri
+            %label{ :for => 'video_uri'} Video URI:
+            %input{ :type => 'text', :name => 'video_uri'}
+         #duration
+            %label{ :for => "duration"} Duration:
+            %input{ :type => 'text', :name => 'duration'}
+         %input{ :type => 'submit', :value => 'Create'}

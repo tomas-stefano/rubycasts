@@ -1,15 +1,13 @@
-require File.expand_path('config/application')
-require 'authentication'
-
 class RubyCasts
-  include Authentication
+  include AuthenticationRequests
   include Settings
   
   helpers do
-    include Rubycasts::Helpers
+    include RubyCasts::Helpers
   end
 
   get '/' do
+    @episodes = Episode.all
     haml :index
   end
 
@@ -24,10 +22,6 @@ class RubyCasts
   get '/stylesheets/application.css' do
     content_type "text/css"
     sass :application
-  end
-  
-  get '/upload_episode' do
-    haml :upload_episode
   end
 
   post '/proposta' do

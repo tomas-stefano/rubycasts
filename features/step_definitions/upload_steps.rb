@@ -5,10 +5,13 @@ Given /^I have seven episodes:$/ do |table|
 end
 
 When /^I upload a video$/ do
-  click_link('Upload Episode')
-  fill_in('title', :with => 'RubyCasts =]')
-  fill_in('description', :with => 'I will talk about RubyCasts')
-  attach_file('episode_video', :with => video_episode_file)
+  click_link('New Episode')
+  @episode = create_an_episode_instance
+  fill_in('title', :with => @episode.title)
+  fill_in('description', :with => @episode.description)
+  fill_in('video_uri', :with => @episode.video_uri)
+  fill_in('duration', :with => @episode.duration)
+  click_button 'Create'
 end
 
 When /^I upload a video without a file$/ do
@@ -20,5 +23,7 @@ Then /^I should not see the video in the rubycats page$/ do
 end
 
 Then /^I should see the video in the rubycats page$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content(@episode.title)
+  page.should have_content(@episode.description)
+  page.should have_content(@episode.duration)
 end
