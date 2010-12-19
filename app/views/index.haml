@@ -1,4 +1,12 @@
-#current_video
+#header
+	%header
+		%div
+			%h1 RubyCasts
+		%menu
+			%h2 Episódios			
+			%h2 Feedback
+			%h2 Sobre
+#current_episode
 	- unless @episodes.empty?
 		- @episode = @episodes.shift
 		%h3

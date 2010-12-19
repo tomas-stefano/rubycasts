@@ -1,3 +1,4 @@
+# coding: utf-8
 
 Given /^I have seven episodes:$/ do |table|
   # table is a Cucumber::Ast::Table
@@ -26,4 +27,11 @@ Then /^I should see the video in the rubycats page$/ do
   page.should have_content(@episode.title)
   page.should have_content(@episode.description)
   page.should have_content(@episode.duration)
+end
+
+Then /^I should be redirected to rubycats page$/ do
+  page.should have_content("Episódios")
+  page.should have_content("Sobre")
+  page.should have_content("Feedback")
+  page.should have_selector("#current_episode")
 end

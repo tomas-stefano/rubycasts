@@ -5,8 +5,8 @@ Feature: Upload video
 
   Scenario: Should not be possible to upload a video when not logged in
 	Given I am not logged in
-    When I go to "upload_episode"
-    Then I should redirect to rubycats page
+    When I go to "new episode"
+    Then I should be redirected to rubycats page
   
   Scenario: Should be possible to upload a video when logged in
     Given I am logged in

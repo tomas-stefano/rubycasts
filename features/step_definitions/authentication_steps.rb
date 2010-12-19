@@ -1,9 +1,17 @@
 
 Given /^I am logged in$/ do
   visit(path_to("logged_in"))
-  fill_in 'Login', :with => 'email@yahoo.com'
-  fill_in 'Password', :with => 'super_secret'
+  
+  email = 'email@gmail.com'
+  password = 'super_secret'
+  
+  User.create(:email => email, :password => password)
+  
+  fill_in 'Login', :with => email
+  fill_in 'Password', :with => password
+  
   click_button 'Sign in'
+  
   Then "I should see \"Sign in!\""
 end
 
