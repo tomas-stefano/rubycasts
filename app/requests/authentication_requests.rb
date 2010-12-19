@@ -11,8 +11,12 @@ module AuthenticationRequests
 
   post '/try_to_login' do
     @user = User.authenticate!(params)
-    flash[:notice] = 'Sign in!'
-    haml :dashboard
+    if @user
+      session[:user] = @user
+      flash[:notice] = 'Sign in!'
+      haml :dashboard
+    else
+    end
   end
   
 end

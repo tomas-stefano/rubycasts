@@ -5,6 +5,8 @@ require File.join(File.dirname(__FILE__), '..', '..', 'config', 'application')
 require 'capybara'
 require 'capybara/cucumber'
 require 'rspec'
+require 'database_cleaner'
+DatabaseCleaner.strategy = :truncation
 
 Capybara.app = Sinatra::Application
 
@@ -36,4 +38,12 @@ end
 
 World do
   RubyCastsWorld.new
+end
+
+Before do
+  DatabaseCleaner.clean
+end
+
+at_exit do
+  DatabaseCleaner.clean
 end

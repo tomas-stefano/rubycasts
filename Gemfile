@@ -10,7 +10,9 @@ gem 'dm-core'
 gem 'dm-migrations'
 gem 'dm-validations'
 gem 'dm-postgres-adapter'
+gem 'rack'
 gem 'rack-flash'
+gem 'database_cleaner'
 
 group :test do
   gem 'cucumber'
