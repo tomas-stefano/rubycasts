@@ -1,4 +1,9 @@
 module EpisodesRequests
+  
+  before '/episodes/*' do
+    authenticate_user!
+  end
+  
   get '/episodes/new' do
     haml :episodes_new
   end

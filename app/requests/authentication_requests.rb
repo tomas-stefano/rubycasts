@@ -1,22 +1,24 @@
 
 module AuthenticationRequests
 
-  before '/episodes/*' do
-    authenticate_user!
-  end
-
   get '/sign_in' do
     haml :sign_in
   end
 
   post '/try_to_login' do
-    @user = User.authenticate!(params)
+    @user = User.authenticate!(:email => params["email"], :password => params["password"])
     if @user
-      session[:user] = @user
+      session[:user] = @user.id
       flash[:notice] = 'Sign in!'
-      haml :dashboard
+      redirect '/dashboard'
     else
+      redirect '/'
     end
   end
-  
+
+  get '/dashboard' do
+    authenticate_user!
+    haml :dashboard
+  end
+
 end

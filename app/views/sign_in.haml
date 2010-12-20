@@ -1,8 +1,8 @@
 #sign_in
    %form{ :action => "/try_to_login", :method => "post"}
       %fieldset
-         %label{ :for => "Login" } Login:
-         %input{ :type => "text", :name => "Login"}
+         %label{ :for => "email" } Email:
+         %input{ :type => "text", :name => "email"}
          %label{ :for => "Password" } Password:
-         %input{ :type => "text", :name => "Password"}
+         %input{ :type => "text", :name => "password"}
          %input{ :type => 'submit', :value => 'Sign in'}

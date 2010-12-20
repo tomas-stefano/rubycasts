@@ -23,13 +23,13 @@ Then /^I should not see the video in the rubycats page$/ do
   pending # express the regexp above with the code you wish you had
 end
 
-Then /^I should see the video in the rubycats page$/ do
+Then /^I should see the video in the rubycasts page$/ do
   page.should have_content(@episode.title)
   page.should have_content(@episode.description)
   page.should have_content(@episode.duration)
 end
 
-Then /^I should be redirected to rubycats page$/ do
+Then /^I should be redirected to rubycasts page$/ do
   page.should have_content("Episódios")
   page.should have_content("Sobre")
   page.should have_content("Feedback")

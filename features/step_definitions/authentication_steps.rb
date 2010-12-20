@@ -7,8 +7,8 @@ Given /^I am logged in$/ do
   
   User.create(:email => email, :password => password)
   
-  fill_in 'Login', :with => email
-  fill_in 'Password', :with => password
+  fill_in 'email', :with => email
+  fill_in 'password', :with => password
   
   click_button 'Sign in'
   

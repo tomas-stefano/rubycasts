@@ -1,9 +1,20 @@
 class RubyCasts
   include AuthenticationRequests
-  include Settings
+  extend ApplicationLogger
+  
+  use Rack::Flash
+  use Rack::ShowExceptions
+  use Rack::CommonLogger, logger_file!
+  
+  set :root, File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
+  set :views, Proc.new { File.join(root, 'app', "views") }
+  set :public, Proc.new { File.join(root, "public") }
+  set :logging, false
+  
+  enable :sessions
   
   helpers do
-    include RubyCasts::Helpers
+    include Helpers
   end
 
   get '/' do
@@ -22,9 +33,6 @@ class RubyCasts
   get '/stylesheets/application.css' do
     content_type "text/css"
     sass :application
-  end
-
-  post '/proposta' do
   end
 
 end

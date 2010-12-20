@@ -1,13 +1,11 @@
 ENV['RACK_ENV'] = 'test'
 
-require File.join(File.dirname(__FILE__), '..', '..', 'config', 'application')
-
-require 'capybara'
+period = File.dirname(__FILE__)
+require File.expand_path(File.join(period, '..', '..', 'boot'))
+Bundler.require(:test)
 require 'capybara/cucumber'
-require 'rspec'
-require 'database_cleaner'
-DatabaseCleaner.strategy = :truncation
 
+DatabaseCleaner.strategy = :truncation
 Capybara.app = Sinatra::Application
 
 class RubyCastsWorld

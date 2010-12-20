@@ -1,0 +1,5 @@
+client_id: cc71eb35ed94135cf0aa
+secret: 781c524b40eb5aa76748d24ff586589b83de780f
+authorize_uri: https://github.com/login/oauth/authorize
+access_token_uri: https://github.com/login/oauth/access_token
+cookie_secret: 3dd410929706203fe6fe008ca1cc721450609746

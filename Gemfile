@@ -13,6 +13,7 @@ gem 'dm-postgres-adapter'
 gem 'rack'
 gem 'rack-flash'
 gem 'database_cleaner'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :test do
   gem 'cucumber'
