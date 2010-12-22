@@ -11,6 +11,8 @@ class Episode
   property :video_webm_uri, String, :length => 255, :required => true
   property :video_ogg_uri, String,  :length => 255, :required => true
 
+  has n, :comments
+
 end
 
 # episode = Episode.new

@@ -3,3 +3,9 @@
 		%source{:src => episode.video_mp4_uri, :type => "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\""}
 		%source{:src => episode.video_webm_uri, :type => "video/webm; codecs=\"vp8, vorbis\""}
 		%source{:src => episode.video_ogg_uri, :type => "video/ogg; codecs=\"theora, vorbis\""}
+	%p{:class => "vjs-no-video"}
+		%strong
+			Download video:
+			%a{:href => episode.video_mp4_uri } MP4
+			%a{:href => episode.video_webm_uri} WebM
+			%a{:href => episode.video_ogg_uri } Ogg

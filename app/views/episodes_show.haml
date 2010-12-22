@@ -1,15 +1,16 @@
+= partial :header
 #current_episode
 	%h3
 		= "Episódio #{@episode.id} - #{@episode.title}"
 	%span
 		= @episode.description
 	= partial :player, :locals => {:episode => @episode}
-	%p{:class => "vjs-no-video"}
-		%strong
-			Download video:
-			%a{:href => @episode.video_mp4_uri } MP4
-			%a{:href => @episode.video_webm_uri} WebM
-			%a{:href => @episode.video_ogg_uri } Ogg
+
 #comments
 	%span
 		Comentários
+	- @episode.comments.each_with_index do |comment, index|
+		%h4
+			= index
+		%span
+			= comment.content

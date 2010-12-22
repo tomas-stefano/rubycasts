@@ -1,0 +1,4 @@
+client_id: hocus_pocus
+secret: abra_kadabra
+authorize_uri: https://github.com/login/oauth/authorize
+access_token_uri: https://github.com/login/oauth/access_token

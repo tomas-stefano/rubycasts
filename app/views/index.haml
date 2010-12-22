@@ -1,11 +1,4 @@
-#header
-	%header
-		%div
-			%h1 RubyCasts
-		%menu
-			%h2 Episódios			
-			%h2 Feedback
-			%h2 Sobre
+= partial :header
 #current_episode
 	- unless @episodes.empty?
 		- @episode = @episodes.shift
