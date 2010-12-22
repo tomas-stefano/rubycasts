@@ -11,6 +11,7 @@ doc/
 coverage/
 tmp/
 config/database.yml
+config/production.yml
 db/schema.rb
 db/test.db
 .bundle/
