@@ -15,7 +15,15 @@ describe Episode do
     end
     
     it 'video uri should be required' do
-      episode.errors.on(:video_uri).should_not be_nil
+      episode.errors.on(:video_ogg_uri).should_not be_nil
+    end
+
+    it 'video uri should be required' do
+      episode.errors.on(:video_mp4_uri).should_not be_nil
+    end
+
+    it 'video uri should be required' do
+      episode.errors.on(:video_webm_uri).should_not be_nil
     end
     
     it 'duration should be required' do

@@ -12,6 +12,12 @@ describe Sinatra::Application do
       get '/'
       last_response.should be_ok
     end
+    
+    it 'should get only the six first episodes' do
+      Episode.should_receive(:first).with(6).and_return([])
+      get '/'
+      last_response.status.should == 200
+    end
 
     it "should return 404 status" do
       get '/404'
@@ -21,6 +27,22 @@ describe Sinatra::Application do
     it "should return about page" do
       get '/about'
       last_response.should be_ok
+    end
+    
+    it 'should be redirect when not logged in' do
+      get 'episodes/new'
+      last_response.status.should == 302
+    end
+    
+    it 'should be redirect when not have some episode' do
+      get 'episodes/12'
+      last_response.status.should == 302
+    end
+    
+    it 'should not redirect when have an episode' do
+      Episode.should_receive(:get).and_return(Object.new)
+      get 'episodes/6'
+      last_response.status.should == 200
     end
 
   end

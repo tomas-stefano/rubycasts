@@ -18,7 +18,7 @@ class RubyCasts
   end
 
   get '/' do
-    @episodes = Episode.all
+    @episodes = Episode.first(6)
     haml :index
   end
 
