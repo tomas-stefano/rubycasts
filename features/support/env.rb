@@ -18,13 +18,17 @@ class RubyCastsWorld
   
   TITLES = ["RubyCasts", "Capybara", "Ruby", "Rails", "Sinatra", "Merb", "EventMachine"]
   DESCRIPTIONS = ["About Capybara", "About Ruby", "About Rails", "About Sinatra", "About EventMachine"]
-  URIS = ['http://media.rubycasts.com/videos/1_benchmark.mov', 'http://media.rubycasts.com/videos/1_profiler.mov']
+  URIS = ['http://media.rubycasts.com/videos/1_benchmark.mp4', 'http://media.rubycasts.com/videos/1_profiler.ogg']
   
   def create_an_episode_instance
     episode = Episode.new
     episode.title = random_element(TITLES)
     episode.description = random_element(DESCRIPTIONS)
-    episode.video_uri = random_element(URIS)
+    
+    episode.video_mp4_uri = random_element(URIS)
+    episode.video_webm_uri = random_element(URIS)
+    episode.video_ogg_uri = random_element(URIS)
+            
     episode.duration = '6:09'
     episode  
   end

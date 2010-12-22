@@ -20,7 +20,7 @@ class Configuration
   #
   def datamapper(adapter_name, options)
     DataMapper.setup(adapter_name, options)
-    DataMapper.auto_migrate!
+    DataMapper.auto_upgrade!
   end
   
 end

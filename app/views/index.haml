@@ -10,51 +10,13 @@
 	- unless @episodes.empty?
 		- @episode = @episodes.shift
 		%h3
-			= @episode.title
+			= "Episódio #{@episode.id} - #{@episode.title}"
 		%span
 			= @episode.description
 		%span
 			= "Duration: #{@episode.duration}"
-
-/ %div{:id => "current_video"}
-/ 	%div{:class => "info grid_4 alpha" }
-/ 		%h2 Hackety Hack, why the lucky stiff
-/ 		%p
-/ 			Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-/ 			ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-/ 			velit esse cillum dolore eu fugiat nulla pariatur.	Excepteur sint occaecat cupidatat non proident, sunt in
-/ 			culpa qui officia deserunt mollit anim id est laborum
-/ 	%div{:class => "grid_6 omega"}
-/ 		%iframe{:src=>"http://player.vimeo.com/video/5047563?byline=0&amp;portrait=0&amp;color=D62219", :width=>"460", :height=>"253", :frameborder=>"0"}
-/ 	%br.clear
-/ %br.clear
-/ %div{:id => "envie_video"}
-/ 	%h3 Envie seu screencats
-/ 	%form{:class => "grid_6 alpha", :action => "/proposta", :method => "post"}
-/ 		%div.notice
-/ 			= env['x-rack.flash'][:notice]
-/ 		%div.input	
-/ 			%label{:for => "name"} Nome: * 
-/ 			%input{:id => "name", :name => "name"}
-/ 		%div.input	
-/ 			%label{:for => "email"} Email: *
-/ 			%input{:id => "email", :name => "email"}
-/ 		%div.input	
-/ 			%label{:for => "url"}	URL: *
-/ 			%input{:id => "url", :name => "url"}
-/ 		%div.input	
-/ 			%label{:for => "description"} Descrição: *
-/ 			%textarea{:id => "description", :name => "description"}
-/ 		%div.input	
-/ 			%label{:for => "sugest"} Sugestão:
-/ 			%textarea{:id => "sugest", :name => "sugest", :placeholder => "Tem alguma sugestão para nosso primeiro screencast?"}
-/ 
-/ 		%input{:type => "submit"}
-/ 	%div{:class => "grid_4 omega"}
-/ 		%p 
-/ 			Nesse primeiro momento queremos que comunidade rubista envie seus 
-/ 			screencasts para ser o Primeiro Episodio do Rubycasts.
-/ 			Para enviar seu screencasts basta hospeda-lo em algun site e colocar a url
-/ 			do video, no formulario ao lado. Não esqueça de deixar uma sugestão sobre
-/ 			qual tema gostaria de ver nos proximos episodios do <strong>Rubycasts</strong>
-/ 	%br.clear
+		%div{:class => "video-js-box vjs-paused"}
+			%video{:id => "home_video_js", :class => "video-js", :poster => "http://video-js.zencoder.com/oceans-clip.png", :controls => "preload", :width => '640', :height => '264'}
+				%source{:src => @episode.video_mp4_uri, :type => "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\""}
+				%source{:src => @episode.video_webm_uri, :type => "video/webm; codecs=\"vp8, vorbis\""}
+				%source{:src => @episode.video_ogg_uri, :type => "video/ogg; codecs=\"theora, vorbis\""}

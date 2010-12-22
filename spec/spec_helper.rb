@@ -4,16 +4,17 @@ $LOAD_PATH.unshift(sinatra_root) unless $LOAD_PATH.include?(sinatra_root)
 require 'boot'
 Bundler.setup(:test)
 Bundler.require(:test)
-DatabaseCleaner.strategy = :truncation
 
-Configuration.config do |config|
-  config.datamapper(:default, "postgres://localhost/rubycasts_test")
+set :environment, :test
+configure :test do
+  DataMapper.setup(:test, "postgres://localhost/rubycasts_test")
 end
+
+DataMapper.repository :test
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
-  
   config.before(:each) do
-    DatabaseCleaner.clean
+    DataMapper.auto_migrate!
   end
 end

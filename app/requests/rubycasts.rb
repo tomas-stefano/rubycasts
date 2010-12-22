@@ -34,5 +34,5 @@ class RubyCasts
     content_type "text/css"
     sass :application
   end
-
+  
 end
