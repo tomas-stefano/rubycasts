@@ -14,6 +14,10 @@ module Helpers
 	
 	def admin_required!
 	  redirect '/' unless session['user_id']
+	  if user = User.get(session['user_id'])
+    else
+      
+    end
 	end
 
 end
