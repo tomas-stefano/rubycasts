@@ -1,7 +1,7 @@
-#episode-content
-	%h3
-		= "Episódio #{@episode.id} - #{@episode.title}"
-	%p
-		= @episode.description
-	%p
-		= "Duração: #{@episode.duration}"
+%header
+  %h1= "Episódio #{@episode.id} - #{@episode.title}"
+  %time= @episode.duration
+
+%p= @episode.description 
+
+= partial :player, :locals => {:episode => @episode}
