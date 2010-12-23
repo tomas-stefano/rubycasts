@@ -1,8 +1,14 @@
-#header
-	%header
-		%div
-			%h1 RubyCasts
-		%menu
-			%h2 Episódios			
-			%h2 Feedback
-			%h2 Sobre
+%header
+	#logo
+		%a{:href => '/'}
+			%img{:alt => "RubyCasts", :src => '/images/rubycasts_logo.png'}
+	%nav
+		%ul{:id => 'menu'}
+			%li
+				%a{:href => '#'}Episódios
+			%li
+				%a{:href => '/about'} Sobre
+			%li
+				%a{:href => '#'} Feedback
+			%li
+				%a{:href => '#', :id => 'twitter'} Twitter(Colocar imagem)

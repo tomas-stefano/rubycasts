@@ -15,6 +15,7 @@ gem 'rack-flash'
 gem 'database_cleaner'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'omniauth'
+gem 'sass'
 
 group :test do
   gem 'cucumber'

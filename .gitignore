@@ -16,3 +16,4 @@ db/schema.rb
 db/test.db
 .bundle/
 configurations.yml
+.sass-cache
