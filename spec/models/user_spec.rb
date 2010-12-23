@@ -24,4 +24,13 @@ describe User do
       end
     end
   end
+
+  describe '#admin?' do
+    it 'should return true if user is admin' do
+      User.new(:admin => true).admin?.should be_true
+    end
+    it 'should return false if user is not admin' do
+      User.new(:admin => false).admin?.should be_false
+    end
+  end
 end

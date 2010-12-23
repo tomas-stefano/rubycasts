@@ -4,6 +4,7 @@ class User
   property :id, Serial
   property :email, String
   property :encrypted_password, String, :length => 255
+  property :admin, Boolean
   
   # Get the encrypted_password for the User
   #

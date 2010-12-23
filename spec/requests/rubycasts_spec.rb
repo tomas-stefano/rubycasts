@@ -40,7 +40,7 @@ describe Sinatra::Application do
     end
     
     it 'should not redirect when have an episode' do
-      Episode.should_receive(:get).and_return(Object.new)
+      Episode.should_receive(:get).and_return(Episode.new)
       get 'episodes/6'
       last_response.status.should == 200
     end
