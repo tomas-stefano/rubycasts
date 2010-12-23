@@ -6,5 +6,9 @@ module Helpers
 	def erb_partial(name, options={})
 	 erb "_#{name}".to_sym, options.merge!(:layout => false)
 	end
+	
+	def current_rubycasts_user
+    @current_rubycasts_user ||= RubyCastsUser.first(:token => request.cookies[:token]) if request.cookies[:token]
+	end
 
 end

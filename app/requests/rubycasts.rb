@@ -28,10 +28,6 @@ class RubyCasts
     haml :about
   end
   
-  get '/contact' do
-    haml :contact
-  end
-
   get '/stylesheets/application.css' do
     content_type "text/css"
     sass :application
