@@ -2,8 +2,9 @@
 	- unless @episodes.empty?
 		- @episode = @episodes.shift
 		%section
-			= partial :episode_content, :locals => {:episode => @episode}
-			= partial :player, :locals => {:episode => @episode}
+			#episode-helper
+				= partial :episode_content, :locals => {:episode => @episode}
+				= partial :player, :locals => {:episode => @episode}
 			
 #other_episodes
 	- @episodes.to_a.each do |episode|
