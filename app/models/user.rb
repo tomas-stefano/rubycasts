@@ -49,7 +49,7 @@ class User
       user.github_uid  = omniauth_hash['uid']
       user.github_user = omniauth_hash['user_info']['nickname']
       user.name = omniauth_hash['user_info']['name']
-      user.gravatar_id = omniauth_hash['extra']['user_hash']['gravatar_id']
+      user.gravatar_id = omniauth_hash['extra']['user_hash']['gravatar_id'] if (omniauth_hash["extra"] and omniauth_hash["extra"]["user_hash"])
       user.site = omniauth_hash['user_info']['urls']['Blog'] if omniauth_hash['user_info']['urls']
       user.admin = false
       user.save!

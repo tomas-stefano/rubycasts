@@ -1,5 +1,4 @@
 class RubyCasts
-  include AuthenticationRequests
   include OmniAuthRequests
   extend ApplicationLogger
   
@@ -26,6 +25,10 @@ class RubyCasts
 
   get '/about' do
     haml :about
+  end
+  
+  get '/dashboard' do
+    haml :dashboard
   end
   
 end

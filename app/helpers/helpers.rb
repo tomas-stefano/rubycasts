@@ -1,4 +1,5 @@
 module Helpers
+
 	def partial(name, options = {})
 		haml "_#{name}".to_sym, options.merge!(:layout => false)
 	end
@@ -8,7 +9,11 @@ module Helpers
 	end
 	
 	def current_rubycasts_user
-    @current_rubycasts_user ||= User.first(:token => request.cookies[:token]) if request.cookies[:token]
+    # @current_rubycasts_user ||= User.first(:token => request.cookies[:token]) if request.cookies[:token]
+	end
+	
+	def admin_required!
+	  redirect '/' unless session['user_id']
 	end
 
 end

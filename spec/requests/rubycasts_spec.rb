@@ -34,6 +34,11 @@ describe Sinatra::Application do
       last_response.status.should == 302
     end
     
+    it 'should be redirect to root when not loggen in' do
+      post 'episodes/create', {:title => 'Lets go!'}
+      last_response.status.should == 302
+    end
+    
     it 'should be redirect when not have some episode' do
       get 'episodes/12'
       last_response.status.should == 302

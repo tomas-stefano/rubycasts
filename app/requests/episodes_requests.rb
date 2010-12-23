@@ -1,12 +1,12 @@
 module EpisodesRequests
   
   get '/episodes/new' do
-    redirect '/' unless session[:user]
+    admin_required!
     haml :episodes_new
   end
   
   post '/episodes/create' do
-    redirect '/' unless session[:user]
+    admin_required!
     @episode = Episode.new(params)
     if @episode.save
       flash[:notice] = "Create Episode!"
