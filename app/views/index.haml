@@ -1,17 +1,14 @@
 #current_episode
-	- unless @episodes.empty?
-		- @episode = @episodes.shift
-		%section
-			#episode-helper
-				= partial :episode_content, :locals => {:episode => @episode}
-				= partial :player, :locals => {:episode => @episode}
+  - unless @episodes.empty?
+    - @episode = @episodes.shift
+    %section
+      = partial :episode_content, :locals => {:episode => @episode}
+      = partial :player, :locals => {:episode => @episode}
 			
 #other_episodes
-	- @episodes.to_a.each do |episode|
-		%div{:id => "episode-#{episode.id}"}
-			%a{:class => "episode-link", :href => "/episodes/#{episode.id}"}
-				= "Episódio #{episode.id} - #{episode.title}"
-			%span
-				= episode.description
-
-= partial :footer
+  - @episodes.to_a.each do |episode|
+    %div{:id => "episode-#{episode.id}"}
+      %a{:class => "episode-link", :href => "/episodes/#{episode.id}"}
+        = "Episódio #{episode.id} - #{episode.title}"
+      %span
+        = episode.description
