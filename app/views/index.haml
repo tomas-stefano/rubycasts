@@ -3,10 +3,12 @@
   %article#current_episode
     = partial :episode_content, :locals => {:episode => @episode}
 			
-#other_episodes
-  - @episodes.to_a.each do |episode|
-    %div{:id => "episode-#{episode.id}"}
-      %a{:class => "episode-link", :href => "/episodes/#{episode.id}"}
-        = "Episódio #{episode.id} - #{episode.title}"
-      %span
-        = episode.description
+%aside
+  %ul#episodes
+    - @episodes.to_a.each do |episode|
+      %li{:id => "episode-#{episode.id}"}
+        %h2
+          %a.episode-link{:href => "/episodes/#{episode.id}"}
+            = "Episódio #{episode.id} - #{episode.title}"
+        %p
+          = episode.description
