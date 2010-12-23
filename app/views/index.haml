@@ -4,6 +4,9 @@
     = partial :episode_content, :locals => {:episode => @episode}
 			
 %aside
+  %form
+    %input{:type => "search", :placeholder => 'Search'}
+    %input{:type => "submit"}
   %ul#episodes
     - @episodes.to_a.each do |episode|
       %li{:id => "episode-#{episode.id}"}
