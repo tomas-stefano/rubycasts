@@ -9,6 +9,7 @@ task :console do
   system("ruby -I. -S bundle console")
 end
 
+desc 'Bootstrap application with some data(Like db:seed from Rails)'
 task :bootstrap do
   comments = 10.times.map{|i| Comment.create!(:content => "#{1} Lorem ipsum dolor sit amet") }
 
