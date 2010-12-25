@@ -9,9 +9,9 @@ module Helpers
 	end
 	
 	def admin_required!
-	  redirect '/' unless session['user_id']
-	  if user = User.get(session['user_id'])
-	    redirect '/' unless user.admin?
+	  redirect '/' unless session['github_uid']
+	  if user = User.get(session['github_uid'])
+	    redirect '/' unless user.admin? or user.token != session['token']
     else
       redirect '/'
     end

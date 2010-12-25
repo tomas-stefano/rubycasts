@@ -3,7 +3,6 @@ class User
   
   property :id, Serial
   property :email, String
-  property :encrypted_password, String, :length => 255
 
   property :admin, Boolean
   property :github_uid, String, :length => 255
@@ -12,6 +11,8 @@ class User
   property :gravatar_id, String, :length => 255
   property :site, String, :length => 255
   
+  # TODO: Generate some token
+  #
   def self.create_from_omniauth!(omniauth_hash)
     User.new.tap do |user|
       user.email       = omniauth_hash['user_info']['email']
