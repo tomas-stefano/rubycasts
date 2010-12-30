@@ -50,5 +50,11 @@ describe User do
     end
     
   end
+
+  describe '#generate_token' do
+    it 'should create unique token when saving' do
+      User.create!.token.should_not == User.create!.token
+    end
+  end
   
 end

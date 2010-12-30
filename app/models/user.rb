@@ -10,6 +10,9 @@ class User
   property :name, String, :length => 255
   property :gravatar_id, String, :length => 255
   property :site, String, :length => 255
+  property :token, String, :length => 255
+
+  before :save!, :generate_token!
   
   # TODO: Generate some token
   #
@@ -24,6 +27,11 @@ class User
       user.admin       = false
       user.save!
     end
+  end
+  
+  DICT_WORDS = ('a'..'z').to_a + ('A'..'Z').to_a + ('1'..'9').to_a
+  def generate_token!
+    self.token = Array.new(60) { DICT_WORDS.sample }.join
   end
   
 end
