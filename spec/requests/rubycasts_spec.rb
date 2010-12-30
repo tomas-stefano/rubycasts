@@ -49,6 +49,11 @@ describe Sinatra::Application do
       get 'episodes/6'
       last_response.status.should == 200
     end
+    
+    it 'should create a comment' do
+      post 'comments/create', {:body => 'Hey ow! Lets go!'}
+      Comment.first.body.should == 'Hey ow! Lets go!'
+    end
 
   end
 end

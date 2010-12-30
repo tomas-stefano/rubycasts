@@ -9,11 +9,11 @@
 		%h4
 			= index
 		%span
-			= comment.content
-	- if current_rubycasts_user
+			= comment.body
+	- if current_user
 		%form{:action => '/comments/create', :method => 'post'}
-			%label{:for => 'body'} Comentário:
-			%textarea{:name => 'comment'}
+			%label{ :for => 'body' } Comentário:
+			%textarea{:name => 'body'}
 			%input{:type => 'Submit', :value => "Criar Comentário"}
 	- else
 		%p
