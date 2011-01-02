@@ -11,9 +11,22 @@
           %a{:href => '/'} RubyCasts
         %nav
           = partial :menu
+        #social
+          %ul
+            %li
+              %a.feeds{:href => '#'} Feeds
+            %li
+              %a.twitter{:href => '#'} Twitter
       %section#content
         = yield
       %footer
         = partial :menu
+        #social
+          %ul
+            %li
+              %a.feeds{:href => '#'} Feeds
+            %li
+              %a.twitter{:href => '#'} Twitter
+
       %script{:src => '/javascripts/player_html_five.js', :type => 'text/javascript'}
       %script{:src => '/javascripts/application.js', :type => 'text/javascript'}
