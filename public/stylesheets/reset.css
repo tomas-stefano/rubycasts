@@ -31,15 +31,3 @@ q:before,q:after {
 }
 abbr,acronym { border: 0;
 }
-input, textarea, select{
-  background: url(/images/new/elements_forms.png) repeat-x 0 0;
-  border: 1px solid #ccc;
-  padding: 9px 12px;
-  font-size: 18px;
-  font-weight: normal;
-  color: #999999;
-}
-fieldset input, fieldset textarea, fieldset select{
-  width: 814px;
-  display: block;
-}
