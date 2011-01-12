@@ -1,0 +1,60 @@
+/* Rubycasts layout file */
+
+body{
+  background: #333 url(../images/body-bg.png) repeat-x center top;
+  font: 62.5% "Helvetica Neue", Helvetica, Arial, "Sans Serif";
+  color: #ccc;
+  text-shadow: #999 0px 1px 0px;
+}
+header, section, footer{
+  display: block;
+}
+#container{
+  margin: 0 auto;
+  width: 960px;
+}
+#container>header{
+  background: #666;
+  height: 90px;
+  padding: 10px;
+}
+#logo{
+  background: url(/images/logo.png) no-repeat 0 0;
+  height: 92px;
+  width: 320px;
+  float: left;
+  text-indent: -15000px;
+}
+nav, #social{
+  float: right;
+}
+section{
+  
+}
+#current_episode h1{
+  font-size: 3em;
+  display: inline;
+}
+#current_episode time{
+  font-size: 1.8em;
+}
+#current_episode p{
+  font-size: 2em;
+}
+#current_episode .video-js-box{
+  float: left;
+}
+aside{
+  float: right;
+  width: 30%;
+}
+#tags li{
+  float: left;
+  margin-right: 5px;
+}
+footer{
+  clear: both;
+}
+footer ul{
+  float: left;
+}
