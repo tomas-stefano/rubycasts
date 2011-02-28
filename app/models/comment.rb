@@ -3,6 +3,6 @@ class Comment
   belongs_to :episode
   
   property :id, Serial
-  property :body, String, :length => 255
-  property :episode_id, Integer
+  property :body, String, :length => 255, :required => true
+  property :episode_id, Integer, :required => true
 end
