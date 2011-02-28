@@ -4,7 +4,7 @@ source :rubygems
 
 gem 'haml'
 gem 'sinatra-helpers'
-gem 'sinatra', '>= 1.0'
+gem 'sinatra', '>= 1.1.3'
 gem 'thin', '>= 1.2.7'
 gem 'dm-core'
 gem 'dm-migrations'
