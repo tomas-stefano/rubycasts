@@ -1,6 +1,7 @@
 %header
-  %h1= "Episódio #{@episode.id} - #{@episode.title}"
-  %time= @episode.duration
+  %h1
+    = "Episódio #{@episode.id} - #{@episode.title}"
+    %time= @episode.duration
 
 %p= @episode.description 
 

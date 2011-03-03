@@ -8,18 +8,18 @@
     %input{:type => "search", :placeholder => 'Search'}
     %input{:type => "submit"}
   %section#episodes
-    %h1 Outros Episodios
+    %h2 Outros Episodios
     %ul
       - @episodes.to_a.each do |episode|
         %li{:id => "episode-#{episode.id}"}
-          %h2
+          %h3
             %a.episode-link{:href => "/episodes/#{episode.id}"}
               = "Episódio #{episode.id} - #{episode.title}"
           %p= episode.description
 
   /This should go to helper
   %section#tags
-    %h1 Tags
+    %h2 Tags
     %ul
       %li.size_12
         %a{:href => "#"} test

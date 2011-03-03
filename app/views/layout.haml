@@ -12,12 +12,11 @@
         %a{:id => "logo", :href => '/'} RubyCasts
         %nav
           = partial :menu
-        #social
-          %ul
-            %li
-              %a.feeds{:href => '#'} Feeds
-            %li
-              %a.twitter{:href => '#'} Twitter
+        %ul#social
+          %li
+            %a.feeds{:href => '#'} Feeds
+          %li
+            %a.twitter{:href => '#'} Twitter
       %section#content
         = yield
       %footer
