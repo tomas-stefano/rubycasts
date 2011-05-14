@@ -3,7 +3,6 @@
 body{
   background: #000 url(../images/body.png) repeat-x center top;
   font: 62.5% "Helvetica Neue", Helvetica, Arial, "Sans Serif";
-  color: #ccc;
 }
 a{
   color: #990000;
@@ -90,7 +89,7 @@ header #social{
   display: block;
 }
 section{
-  background: #000;
+  background: #F1EEE7;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;

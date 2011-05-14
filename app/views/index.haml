@@ -6,11 +6,11 @@
 %aside
   %form#search
     %input{:type => "search", :placeholder => 'Search'}
-    %input{:type => "submit"}
+    %input{:type => "submit", :value => 'Buscar Episódios'}
   %section#episodes
     %h2 Outros Episodios
     %ul
-      - @episodes.to_a.each do |episode|
+      - @episodes.each do |episode|
         %li{:id => "episode-#{episode.id}"}
           %h3
             %a.episode-link{:href => "/episodes/#{episode.id}"}
