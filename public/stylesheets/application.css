@@ -3,6 +3,7 @@
 body{
   background: #000 url(../images/body.png) repeat-x center top;
   font: 62.5% "Helvetica Neue", Helvetica, Arial, "Sans Serif";
+  color: white;
 }
 a{
   color: #990000;
@@ -88,14 +89,15 @@ header #social{
   text-indent: -15000px;
   display: block;
 }
-section{
-  background: #F1EEE7;
+
+#content{
+  background: #000;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  webkit-box-shadow: 0px 2px 3px #ffffff;
-  moz-box-shadow: 0px 2px 3px #ffffff;
-  box-shadow: 0px 2px 3px #ffffff;
+  webkit-box-shadow: 0px 1px 3px #ffffff;
+  moz-box-shadow: 0px 1px 3px #ffffff;
+  box-shadow: 0px 1px 3px #ffffff;
   overflow: hidden;
   padding: 2%;
 }
@@ -140,6 +142,26 @@ aside #episodes{
 }
 #tags .size_23{
   font-size: 2.3em;
+}
+#members img{
+  float: left;
+  margin: 0 1em 1em 0;
+}
+#members .member{
+  overflow: hidden;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #333;
+}
+#members .member.last{
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+#members .contact{
+  font-size: 1.4em;
+}
+#members .contact li{
+  margin: .5em 0;
 }
 footer{
   border-top: 1px solid #333;
