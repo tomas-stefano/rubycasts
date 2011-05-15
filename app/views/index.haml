@@ -1,9 +1,10 @@
+
 - unless @episodes.empty?
   - @episode = @episodes.shift
   %article#current_episode
     = partial :episode_content, :locals => {:episode => @episode}
 			
-%aside
+#other-episodes
   %form#search
     %input{:type => "search", :placeholder => 'Search'}
     %input{:type => "submit", :value => 'Buscar Episódios'}
@@ -16,28 +17,4 @@
             %a.episode-link{:href => "/episodes/#{episode.id}"}
               = "Episódio #{episode.id} - #{episode.title}"
           %p= episode.description
-
-  /This should go to helper
-  %section#tags
-    %h2 Tags
-    %ul
-      %li.size_12
-        %a{:href => "#"} test
-      %li.size_23
-        %a{:href => "#"} Ipad
-      %li.size_15
-        %a{:href => "#"} rails
-      %li.size_12
-        %a{:href => "#"} sinatra
-      %li.size_20
-        %a{:href => "#"} hipsters
-      %li.size_11
-        %a{:href => "#"} code
-      %li.size_12
-        %a{:href => "#"} design
-      %li.size_23
-        %a{:href => "#"} development
-      %li.size_18
-        %a{:href => "#"} rspec
-  %section#twitter
 
