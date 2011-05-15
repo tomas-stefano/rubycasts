@@ -1,10 +1,6 @@
 /* Rubycasts layout file */
 /*
 
-a{
-  color: #990000;
-  text-decoration: none;
-}
 h1{
   font-size: 4em;
   margin: 0 0 .5em;
@@ -20,14 +16,6 @@ h3{
 p{
   font-size: 1.4em;
 }
-header, section, footer{
-  display: block;
-}
-#container{
-  margin: 0 auto;
-  width: 960px;
-}
-
 
 header #social{
   position: absolute;
@@ -126,10 +114,23 @@ footer #social{
   float: right;
 }*/
 
+a{
+  text-decoration: none;
+}
+
 body {
   background: url(/images/background.gif) repeat scroll 0 0 transparent;
   color: #333333;
   font: 12px/22px Georgia,Arial,Helvetica,sans-serif;
+}
+
+header, section, footer{
+  display: block;
+}
+
+#container{
+  margin: 0 auto;
+  width: 960px;
 }
 
 #page {
@@ -147,6 +148,7 @@ body {
   width: 320px;
   float: left;
   text-indent: -15000px;
+  margin: 25px;
 }
 
 nav{
@@ -155,7 +157,8 @@ nav{
 
 nav li{
 /*  float: left; */
-  margin-right: 1px;
+/*  margin-right: 1px;*/
+	display: inline;
 }
 
 nav li:last-child{
@@ -171,6 +174,7 @@ nav a{
 }
 
 nav a:hover{
+  background: white;
   color: #b61600;
 }
 
