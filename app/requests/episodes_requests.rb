@@ -23,7 +23,7 @@ module EpisodesRequests
   end
   
   post '/comments/create' do
-    @comment = Comment.new(:body => params['body'])
+    @comment = Comment.new(:body => params['body'], :author => params['author'], :episode_id => params['episode_id'])
     if @comment.save
       flash[:notice] = 'Comentário criado com sucesso!'
       redirect back

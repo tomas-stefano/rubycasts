@@ -19,6 +19,7 @@ task :bootstrap do
                   :video_ogg_uri => "http://video-js.zencoder.com/oceans-clip.ogg",
                   :video_webm_uri => "http://video-js.zencoder.com/oceans-clip.webm",
                   :duration => "3:40",
+                  :code => 'class RubyCasts def initialize end end',
                   :comments => comments
 
 

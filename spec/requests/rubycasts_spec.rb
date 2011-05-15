@@ -51,7 +51,7 @@ describe Sinatra::Application do
     end
     
     it 'should create a comment' do
-      post 'comments/create', {:body => 'Hey ow! Lets go!'}
+      post 'comments/create', {:body => 'Hey ow! Lets go!', :author => "You my friend!", :episode_id => 1}
       Comment.first.body.should == 'Hey ow! Lets go!'
     end
 
