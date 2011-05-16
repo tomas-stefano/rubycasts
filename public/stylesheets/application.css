@@ -195,12 +195,15 @@ nav a:hover{
   position: relative;
 }
 
+#current_episode {
+}
+
 #current_episode time{
   font-size: .5em;
 }
 
 #current_episode p{
-  font-size: 2em;
+  font-size: 20px;
 }
 
 #current_episode .video-js-box{
@@ -209,3 +212,13 @@ nav a:hover{
 
 #episodes {
 }
+
+#episode-title h2 {
+	color: #414D5D;
+	font-size: 25px;
+}
+
+.episode-content p {
+    color: #414D5D;
+}
+

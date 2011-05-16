@@ -1,8 +1,9 @@
-%header
-  %h1
-    = "Episódio #{@episode.id} - #{@episode.title}"
-    %time= @episode.duration
+#episode-title
+  %h2= "Episódio #{@episode.id} - #{@episode.title} - #{@episode.duration}"
 
-%p= @episode.description 
-
+#episode-description
+  %p= @episode.description 
+  
+%div{:class => 'CodeRay'}= show_code(@episode.code)
+  
 = partial :player, :locals => {:episode => @episode}

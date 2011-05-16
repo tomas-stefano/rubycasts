@@ -1,8 +1,7 @@
 
 - unless @episodes.empty?
   - @episode = @episodes.shift
-  %article#current_episode
-    = partial :episode_content, :locals => {:episode => @episode}
+  = partial :episode_content, :locals => {:episode => @episode}
 			
 #other-episodes
   %form#search

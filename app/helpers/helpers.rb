@@ -16,5 +16,9 @@ module Helpers
       redirect '/'
     end
 	end
+	
+	def show_code(code)
+	  CodeRay.scan(code, :ruby).div # ruby for now TODO: Change to all lang
+	end
 
 end
