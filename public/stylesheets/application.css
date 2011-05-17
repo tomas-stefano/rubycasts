@@ -189,6 +189,8 @@ nav a{
 
 nav a:hover{
   background: white;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
   color: #b61600;
 }
 
