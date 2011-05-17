@@ -164,9 +164,30 @@ nav ul {
   top: 50px;
 }
 
-nav ul.external-links {
+nav ul#social {
+	background: url(../images/feeds_rubycasts.png) no-repeat;
 	margin: 20px;
 	text-align: right;
+}
+
+#social .feeds{
+  background: url(../images/feeds_rubycasts.png) no-repeat;
+  width: 94px;
+  height: 34px;
+  text-indent: -15000px;
+  float: left;
+}
+
+#social .twitter{
+  background: url(../images/twitter_rubycasts.png) no-repeat;
+  width: 123px;
+  height: 24px;
+  text-indent: -15000px;
+  float: right;
+}
+
+#social li {
+  padding: 0;
 }
 
 nav li {
