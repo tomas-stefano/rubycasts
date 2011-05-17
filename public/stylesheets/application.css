@@ -151,26 +151,28 @@ header, footer {
   margin: 25px;
 }
 
-nav{
+nav {
+  display: block;
   font-size: 2em;
+  height: 150px;
 }
 
-nav ul.pages {
-    position: relative;
-    z-index: 60;
+nav ul {
+  float: right;
+  position: relative;
+  right: 10px;
+  top: 50px;
 }
 
-nav ul.pages li {
-/*    background: url("../img/pagenav.gif") no-repeat scroll right 21px transparent;*/
-/*    float: left;*/
+nav ul.external-links {
+	margin: 20px;
+	text-align: right;
+}
+
+nav li {
+	display: inline;
     padding: 0 15px 0 20px;
     position: relative;
-}
-
-nav li{
-/*  float: left; */
-/*  margin-right: 1px;*/
-	display: inline;
 }
 
 nav li:last-child{
@@ -181,7 +183,7 @@ nav a{
   font-size: 1.2em;
   color: #fff;
   text-shadow: #ccc 0px 1px 0px;
-  display: block;
+/*  display: block;*/
   padding: .2em .5em;
 }
 
@@ -190,7 +192,7 @@ nav a:hover{
   color: #b61600;
 }
 
-#content{
+#content {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
