@@ -124,7 +124,7 @@ body {
   font: 12px/22px Georgia,Arial,Helvetica,sans-serif;
 }
 
-header, section, footer{
+header, footer {
   display: block;
 }
 
@@ -153,6 +153,18 @@ header, section, footer{
 
 nav{
   font-size: 2em;
+}
+
+nav ul.pages {
+    position: relative;
+    z-index: 60;
+}
+
+nav ul.pages li {
+/*    background: url("../img/pagenav.gif") no-repeat scroll right 21px transparent;*/
+/*    float: left;*/
+    padding: 0 15px 0 20px;
+    position: relative;
 }
 
 nav li{
