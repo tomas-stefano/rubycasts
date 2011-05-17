@@ -207,7 +207,7 @@ nav a{
   padding: .2em .5em;
 }
 
-nav a:hover{
+a:hover{
   background: white;
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -246,7 +246,15 @@ nav a:hover{
   float: left;
 }
 
-#episodes {
+.current-episode-content {
+    left: 815px;
+    position: absolute;
+    top: 200px;
+    width: 435px;
+}
+
+.current-episode-content a {
+	color: #b61600;
 }
 
 #episode-title h2 {
