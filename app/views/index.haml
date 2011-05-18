@@ -3,7 +3,7 @@
   - @episode = @episodes.shift
   #current-episode
     = partial :episode_content, :locals => {:episode => @episode}
-			
+
 %div#information-box
   #latest-episodes
     %div.latest
@@ -14,6 +14,8 @@
               = "Episódio #{episode.id} - #{episode.title}"
             %p= episode.description
 
-%form#search
-  %input{:type => "search", :placeholder => 'Search'}
-  %input{:type => "submit", :value => 'Buscar Episódios'}
+%div#sidebar
+  #search
+    %form#search-form
+      %input{:type => "search", :placeholder => 'Search', :id => 'type-search'}
+      %input{:type => "image", :src => '/images/search.png'}

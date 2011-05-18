@@ -1,118 +1,4 @@
 /* Rubycasts layout file */
-/*
-
-h1{
-  font-size: 4em;
-  margin: 0 0 .5em;
-}
-h2{
-  font-size: 2.5em;
-  margin: .5em 0 .2em;
-}
-h3{
-  font-size: 1.8em;
-  margin: .2em 0 .1em;
-}
-p{
-  font-size: 1.4em;
-}
-
-header #social{
-  position: absolute;
-  right: 0;
-  bottom: 10px;
-}
-#social li{
-  float: left;
-  margin-left: 2em;
-}
-#social .feeds{
-  background: url(../images/feeds_rubycasts.png) no-repeat;
-  width: 94px;
-  height: 34px;
-  text-indent: -15000px;
-  display: block;
-}
-#social .twitter{
-  background: url(../images/twitter_rubycasts.png) no-repeat;
-  width: 123px;
-  height: 24px;
-  text-indent: -15000px;
-  display: block;
-}
-
-aside{
-  float: right;
-  width: 30%;
-  margin: 1em 0;
-}
-aside #search{
-  text-align: right;
-}
-aside #episodes{
-  
-}
-#tags li{
-  float: left;
-  margin-right: 5px;
-}
-#tags .size_11{
-  font-size: 1.1em;
-}
-#tags .size_12{
-  font-size: 1.2em;
-}
-#tags .size_15{
-  font-size: 1.5em;
-}
-#tags .size_18{
-  font-size: 1.8em;
-}
-#tags .size_20{
-  font-size: 2.0em;
-}
-#tags .size_23{
-  font-size: 2.3em;
-}
-#members img{
-  float: left;
-  margin: 0 1em 1em 0;
-}
-#members .member{
-  overflow: hidden;
-  padding-bottom: 1em;
-  margin-bottom: 2em;
-  border-bottom: 1px solid #333;
-}
-#members .member.last{
-  border-bottom: 0;
-  margin-bottom: 0;
-}
-#members .contact{
-  font-size: 1.4em;
-}
-#members .contact li{
-  margin: .5em 0;
-}
-footer{
-  border-top: 1px solid #333;
-  margin: 1em 0 0;
-  padding: 3em 0;
-  clear: both;
-  overflow: hidden;
-}
-footer, footer a{
-  color: #666;
-  font-size: 1.2em;
-}
-footer ul li{
-  float: left;
-  margin-right: 1em;
-  line-height: 3em;
-}
-footer #social{
-  float: right;
-}*/
 
 a{
   text-decoration: none;
@@ -203,7 +89,6 @@ nav a{
   font-size: 1.2em;
   color: #fff;
   text-shadow: #ccc 0px 1px 0px;
-/*  display: block;*/
   padding: .2em .5em;
 }
 
@@ -232,8 +117,8 @@ a:hover{
 }
 
 #current-episode {
-	margin-bottom: 45px;
-	padding-bottom: 45px;
+  margin-bottom: 45px;
+  padding-bottom: 45px;
 }
 
 #current-episode-player {
@@ -241,27 +126,28 @@ a:hover{
 }
 
 .current-episode-content {
-    left: 820px;
-    position: absolute;
-    top: 230px;
-    width: 435px;
+  left: 820px;
+  position: absolute;
+  top: 230px;
+  width: 435px;
 }
 
 .current-episode-content a {
-	color: #b61600;
+  color: #b61600;
 }
 
 #episode-title h2 {
-	color: #414D5D;
-	font-size: 25px;
+  color: #414D5D;
+  font-size: 25px;
 }
 
 .episode-content p {
-    color: #414D5D;
+  color: #414D5D;
 }
 
 #information-box {
-	width: 640px;
+  float: left;
+  width: 640px;
 }
 
 #latest-episodes {
@@ -274,19 +160,47 @@ a:hover{
 }
 
 #information-box .latest {
-    border: 2px dashed #BEBEBE;
-    padding: 25px 4px 25px 25px;
+  border: 2px dashed #BEBEBE;
+  padding: 25px 4px 25px 25px;
 }
 
 #information-box li {
-	border-bottom: 2px dashed #CACACA;
-/*	float: left;*/
-	margin: 0 0 15px;
-	overflow: hidden;
-	width: 552px;
+  border-bottom: 2px dashed #CACACA;
+  margin: 0 0 15px;
+  overflow: hidden;
+  width: 552px;
 }
 
 #information-box a {
-	color: #414D5D;
-	font-size: 20px;
+  color: #414D5D;
+  font-size: 20px;
+}
+
+#sidebar {
+  float: right;
+  width: 286px;
+}
+
+#search-form {
+  padding: 4px 0 0 0;
+}
+
+#search {
+  background: url(../images/search_background.png) no-repeat scroll left top transparent;
+  height: 35px;
+  padding: 0;
+  text-align: right;
+}
+
+#search input {
+  background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+}
+
+#search #type-search {
+  color: #b61600;
+  font-size: 15px;
+  margin: 2px 0 0 14px;
+  padding: 4px;
+  width: 230px;
 }
