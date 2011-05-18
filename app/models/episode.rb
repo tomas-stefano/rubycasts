@@ -14,4 +14,8 @@ class Episode
 
   has n, :comments
 
+  def self.first_five_in_desc_order
+    first(5, :order => :id.desc)
+  end
+
 end

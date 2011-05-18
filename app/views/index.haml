@@ -1,19 +1,19 @@
 
 - unless @episodes.empty?
   - @episode = @episodes.shift
-  = partial :episode_content, :locals => {:episode => @episode}
+  #current-episode
+    = partial :episode_content, :locals => {:episode => @episode}
 			
-#other-episodes
-  %form#search
-    %input{:type => "search", :placeholder => 'Search'}
-    %input{:type => "submit", :value => 'Buscar Episódios'}
-  %section#episodes
-    %h2 Outros Episodios
-    %ul
-      - @episodes.each do |episode|
-        %li{:id => "episode-#{episode.id}"}
+%div#information-box
+  #latest-episodes
+    %div.latest
+      - @episodes.to_a.each do |episode|
+        %div{:id => "episode-#{episode.id}"}
           %h3
             %a.episode-link{:href => "/episodes/#{episode.id}"}
               = "Episódio #{episode.id} - #{episode.title}"
           %p= episode.description
 
+%form#search
+  %input{:type => "search", :placeholder => 'Search'}
+  %input{:type => "submit", :value => 'Buscar Episódios'}

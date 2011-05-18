@@ -14,7 +14,7 @@ describe Sinatra::Application do
     end
     
     it 'should get only the six first episodes' do
-      Episode.should_receive(:first).with(6).and_return([])
+      Episode.should_receive(:first_five_in_desc_order).and_return([])
       get '/'
       last_response.status.should == 200
     end

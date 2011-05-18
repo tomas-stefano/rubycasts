@@ -231,25 +231,19 @@ a:hover{
   position: relative;
 }
 
-#current_episode {
+#current-episode {
+	margin-bottom: 45px;
+	padding-bottom: 45px;
 }
 
-#current_episode time{
-  font-size: .5em;
-}
-
-#current_episode p{
-  font-size: 20px;
-}
-
-#current_episode .video-js-box{
-  float: left;
+#current-episode-player {
+  margin: 60px 0 0 0;
 }
 
 .current-episode-content {
-    left: 815px;
+    left: 820px;
     position: absolute;
-    top: 200px;
+    top: 230px;
     width: 435px;
 }
 
@@ -266,3 +260,20 @@ a:hover{
     color: #414D5D;
 }
 
+#information-box {
+	width: 640px;
+}
+
+#latest-episodes {
+  background: #fff;
+  border: 1px solid #D7D4D4;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#latest-episodes .latest {
+    border: 2px dashed #BEBEBE;
+    padding: 15px 5px 0 25px;
+    position: relative;
+}
