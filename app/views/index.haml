@@ -8,11 +8,11 @@
   #latest-episodes
     %div.latest
       - @episodes.to_a.each do |episode|
-        %div{:id => "episode-#{episode.id}"}
-          %h3
+        %ol{:class => "episode-#{episode.id}"}
+          %li
             %a.episode-link{:href => "/episodes/#{episode.id}"}
               = "Episódio #{episode.id} - #{episode.title}"
-          %p= episode.description
+            %p= episode.description
 
 %form#search
   %input{:type => "search", :placeholder => 'Search'}

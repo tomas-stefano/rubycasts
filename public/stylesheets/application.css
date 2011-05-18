@@ -211,7 +211,7 @@ a:hover{
   background: white;
   border-radius: 10px;
   -moz-border-radius: 10px;
-  color: #b61600;
+  color: #b61600 !important;
 }
 
 #content {
@@ -270,10 +270,23 @@ a:hover{
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  padding: 15px;
 }
 
-#latest-episodes .latest {
+#information-box .latest {
     border: 2px dashed #BEBEBE;
-    padding: 15px 5px 0 25px;
-    position: relative;
+    padding: 25px 4px 25px 25px;
+}
+
+#information-box li {
+	border-bottom: 2px dashed #CACACA;
+/*	float: left;*/
+	margin: 0 0 15px;
+	overflow: hidden;
+	width: 552px;
+}
+
+#information-box a {
+	color: #414D5D;
+	font-size: 20px;
 }

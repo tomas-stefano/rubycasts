@@ -3,7 +3,7 @@ class Episode
 
   property :id, Serial
   property :title, String,     :length => 255, :required => true
-  property :description, Text, :length => 255, :required => true
+  property :description, Text, :length => 255, :required => true, :lazy => false
   property :duration, String,  :required => true
   property :code, String, :required => true, :length => 255
   
