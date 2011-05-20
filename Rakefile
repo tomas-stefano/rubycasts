@@ -20,6 +20,7 @@ task :bootstrap do
                   :video_webm_uri => "http://video-js.zencoder.com/oceans-clip.webm",
                   :duration => "3:40",
                   :code => 'class RubyCasts def initialize end end',
+                  :image => 'some_image',
                   :comments => comments
 
 
@@ -30,5 +31,6 @@ task :bootstrap do
                   :video_webm_uri => "http://video-js.zencoder.com/oceans-clip.webm",
                   :duration => "2:40",
                   :code => 'class RubyCasts def initialize @rubycasts = :rubycasts end end',
+                  :image => 'some_image',
                   :comments => comments
 end

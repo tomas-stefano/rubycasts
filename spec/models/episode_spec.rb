@@ -44,6 +44,10 @@ describe Episode do
       episode.errors.on(:duration).should_not be_nil
     end
     
+    it 'asset name should be required' do
+      episode.errors.on(:image).should_not be_nil
+    end
+    
   end
   
   def create_episode(options={})
@@ -54,7 +58,8 @@ describe Episode do
       :duration => '5:50',
       :video_mp4_uri  => 'http',
       :video_webm_uri => 'http',
-      :video_ogg_uri  => 'http'
+      :video_ogg_uri  => 'http',
+      :image => 'default'
     }.merge(options))
   end
   

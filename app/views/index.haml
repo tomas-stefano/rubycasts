@@ -14,8 +14,4 @@
               = "Episódio #{episode.id} - #{episode.title}"
             %p= episode.description
 
-%div#sidebar
-  #search
-    %form#search-form
-      %input{:type => "search", :placeholder => 'Search', :id => 'type-search'}
-      %input{:type => "image", :src => '/images/search.png'}
+= partial :sidebar
