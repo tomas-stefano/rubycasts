@@ -141,7 +141,7 @@ a:hover{
   width: 640px;
 }
 
-#latest-episodes {
+.whitebox {
   background: #fff;
   border: 1px solid #D7D4D4;
   border-radius: 5px;

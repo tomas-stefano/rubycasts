@@ -1,21 +1,18 @@
-#current_episode
-	= partial :episode_content, :locals => {:episode => @episode}
+= partial :episode_content, :locals => {:episode => @episode}
 
-#comments
-	%span
-		Comentários
-	- @episode.comments.each_with_index do |comment, index|
-		%h4
-			= index
-		%span
-			= comment.body
-	- if current_user
-		%form{:action => '/comments/create', :method => 'post'}
-			%label{ :for => 'body' } Comentário:
-			%textarea{:name => 'body'}
-			%input{:type => 'Submit', :value => "Criar Comentário"}
-	- else
-		%p
-			Para comentar os episódios você precisa
-			%a{:href => '/auth/github'} autenticar no GitHub:
-	
+#information-box
+  %div.whitebox
+    %span
+      Comentários
+    - @episode.comments.each do |comment|
+      %p
+        = comment.body
+      - if current_user
+        %form{:action => '/comments/create', :method => 'post'}
+          %label{ :for => 'body' } Comentário:
+          %textarea{:name => 'body'}
+          %input{:type => 'Submit', :value => "Criar Comentário"}
+      - else
+        %p
+          Para comentar os episódios você precisa
+          %a{:href => '/auth/github'} autenticar no GitHub:
