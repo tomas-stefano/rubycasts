@@ -1,0 +1,5 @@
+database:
+    adapter: postgres
+    host: localhost
+    name: rubycasts
+    password: 
