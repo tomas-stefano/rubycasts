@@ -1,3 +1,6 @@
+require 'omni_auth_requests'
+require 'episodes_requests'
+
 class RubyCasts
   include OmniAuthRequests
   extend ApplicationLogger
