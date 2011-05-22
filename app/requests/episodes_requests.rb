@@ -22,7 +22,7 @@ module EpisodesRequests
     haml :episodes_show
   end
   
-  post '/comments/create' do
+  post '/:episode_id/comments/create' do
     login_required!
     @comment = current_user.comments.new(:body => params['body'], :episode_id => params['episode_id'])
     if @comment.save

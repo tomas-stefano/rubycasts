@@ -5,7 +5,7 @@
     %h4.comment-title
       Comentários
     - if current_user
-      %form{:action => '/comments/create', :method => 'post'}
+      %form{:action => "/#{@episode.id}/comments/create", :method => 'post'}
         %label{ :for => 'body' } Comentário
         %textarea{:name => 'body'}
         %input{:type => 'Submit', :value => "Criar Comentário"}
