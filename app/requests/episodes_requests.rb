@@ -24,7 +24,7 @@ module EpisodesRequests
   
   post '/comments/create' do
     login_required!
-    @comment = current_user.comments.new(params)
+    @comment = current_user.comments.new(:body => params['body'], :episode_id => params['episode_id'])
     if @comment.save
       flash[:notice] = 'Comentário criado com sucesso!'
       redirect back

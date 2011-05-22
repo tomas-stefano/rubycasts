@@ -60,8 +60,7 @@ describe Sinatra::Application do
         it 'should create a comment' do
           @comment.body.should == 'Hey ow! Lets go!'
         end 
-        
-        it { @comment.author.should ==  "You my friend!" }
+
         it { @comment.user_id.should == 2 }
         it { @comment.episode_id.should == 1}
       end
