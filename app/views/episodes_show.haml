@@ -4,16 +4,26 @@
   %div.whitebox
     %h4.comment-title
       Comentários
+    - if flash['notice']
+      %p{:class => 'error'}
+        = flash['notice']
     - if current_user
       %form{:action => "/#{@episode.id}/comments/create", :method => 'post'}
-        %label{ :for => 'body' } Comentário
-        %textarea{:name => 'body'}
+        %div
+          %label{:for => 'body'} Comentário
+        %textarea{:name => 'body', :rows => 8, :cols => 45 }
         %input{:type => 'Submit', :value => "Criar Comentário"}
     - else
       %p
         Para comentar os episódios você precisa
         %a{:href => '/auth/github'} autenticar no GitHub
-    %ul
+    %ul.comments
       - @episode.comments.each do |comment| 
         %li.comment
-          = comment.body
+          %div.gravatar
+            %img{:src => gravatar_url(comment), :class => 'avatar', :width => 80, :height => 80}
+            %a{:href => "https://github.com/#{comment.user.github_user}"}
+              = comment.user.name || comment.user.github_user
+          %div.comment-body
+            %p= comment.body
+

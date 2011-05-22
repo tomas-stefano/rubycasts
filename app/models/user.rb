@@ -16,8 +16,6 @@ class User
 
   before :save!, :generate_token!
   
-  # TODO: Generate some token
-  #
   def self.create_from_omniauth!(omniauth_hash)
     User.new.tap do |user|
       user.email       = omniauth_hash['user_info']['email']

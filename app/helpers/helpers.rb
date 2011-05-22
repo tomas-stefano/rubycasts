@@ -24,5 +24,9 @@ module Helpers
 	def show_code(code)
 	  CodeRay.scan(code, :ruby).div # ruby for now TODO: Change to all lang
 	end
+	
+	def gravatar_url(comment)
+	 default_url = "http://gravatar.com/avatar/#{comment.user.gravatar_id}.png"
+	end
 
 end

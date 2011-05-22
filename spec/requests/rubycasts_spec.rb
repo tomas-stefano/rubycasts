@@ -54,8 +54,8 @@ describe Sinatra::Application do
       context 'when valid params' do
         before do
           user = mock(:user, :comments => Comment)
-          should_receive(:current_user).and_return(user)
-          post 'comments/create', {:body => 'Hey ow! Lets go!', :author => "You my friend!", :episode_id => 1}
+          self.should_receive(:current_user).and_return(user)
+          post '/1/comments/create', {:body => 'Hey ow! Lets go!' }
           @comment = Comment.first
         end
         

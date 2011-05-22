@@ -29,7 +29,8 @@ module EpisodesRequests
       flash[:notice] = 'Comentário criado com sucesso!'
       redirect back
     else
-      # ...
+      flash[:notice] = "Comentário não foi criado. =("
+      redirect back
     end
   end
 
