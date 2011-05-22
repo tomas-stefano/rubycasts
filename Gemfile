@@ -18,6 +18,7 @@ gem 'omniauth'
 gem 'sass'
 gem 'redcarpet'
 gem 'coderay'
+gem 'webbynode'
 
 group :test do
   gem 'cucumber'

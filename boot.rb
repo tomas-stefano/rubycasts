@@ -12,10 +12,14 @@ rescue LoadError
 end
 
 Bundler.require
+require 'yaml'
+
+database = YAML.load_file(File.expand_path('config/database.yml'))
+database = database['database']
 
 require 'config/environment'
 Configuration.config do |config|
   config.logger_filename = "logs/rubycasts.log"
   config.load_paths = %w(. app/models app/helpers app/views app/lib app/requests)
-  config.datamapper(:default, "postgres://localhost/rubycasts")
+  config.datamapper(:default, "#{database['adapter']}://#{database['host']}/#{database['name']}")
 end
