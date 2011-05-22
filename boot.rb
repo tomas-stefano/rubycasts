@@ -24,5 +24,6 @@ Configuration.config do |config|
   config.datamapper(:default, {
      :adapter  => database['adapter'],
      :host     => database['host'],
-     :database => database['name']})
+     :database => database['name'],
+     :password => database['password']})
 end
