@@ -15,6 +15,7 @@ Bundler.require
 
 require 'config/environment'
 Configuration.config do |config|
+  config.logger_filename = "logs/rubycasts.log"
   config.load_paths = %w(. app/models app/helpers app/views app/lib app/requests)
   config.datamapper(:default, "postgres://localhost/rubycasts")
 end

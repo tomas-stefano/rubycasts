@@ -50,10 +50,21 @@ describe Sinatra::Application do
       last_response.status.should == 200
     end
     
-    it 'should create a comment' do
-      post 'comments/create', {:body => 'Hey ow! Lets go!', :author => "You my friend!", :episode_id => 1}
-      Comment.first.body.should == 'Hey ow! Lets go!'
+    describe '/comments/post' do
+      context 'when valid params' do
+        before do
+          post 'comments/create', {:body => 'Hey ow! Lets go!', :author => "You my friend!", :episode_id => 1}
+          @comment = Comment.first
+        end
+        
+        it 'should create a comment' do
+          @comment.body.should == 'Hey ow! Lets go!'
+        end 
+        
+        it { @comment.author.should ==  "You my friend!" }
+        it { @comment.user_id.should == 2 }
+        it { @comment.episode_id.should == 1}
+      end
     end
-
   end
 end

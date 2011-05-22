@@ -17,6 +17,10 @@ describe Comment do
     it "should require a episode id" do
       comment.errors.on(:episode_id).should_not be_nil
     end
+    
+    it 'should require a user id' do
+      comment.errors.on(:user_id).should_not be_nil
+    end
   end
 
 end

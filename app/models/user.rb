@@ -1,5 +1,7 @@
 class User
   include DataMapper::Resource
+
+  has n, :comments
   
   property :id, Serial
   property :email, String

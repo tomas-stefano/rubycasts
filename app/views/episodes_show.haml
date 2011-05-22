@@ -2,17 +2,18 @@
 
 #information-box
   %div.whitebox
-    %span
+    %h4.comment-title
       Comentários
-    - @episode.comments.each do |comment|
+    - if current_user
+      %form{:action => '/comments/create', :method => 'post'}
+        %label{ :for => 'body' } Comentário
+        %textarea{:name => 'body'}
+        %input{:type => 'Submit', :value => "Criar Comentário"}
+    - else
       %p
-        = comment.body
-      - if current_user
-        %form{:action => '/comments/create', :method => 'post'}
-          %label{ :for => 'body' } Comentário:
-          %textarea{:name => 'body'}
-          %input{:type => 'Submit', :value => "Criar Comentário"}
-      - else
-        %p
-          Para comentar os episódios você precisa
-          %a{:href => '/auth/github'} autenticar no GitHub:
+        Para comentar os episódios você precisa
+        %a{:href => '/auth/github'} autenticar no GitHub
+    %ul
+      - @episode.comments.each do |comment| 
+        %li.comment
+          = comment.body

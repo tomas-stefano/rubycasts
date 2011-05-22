@@ -4,6 +4,11 @@ class Configuration
   def self.config
     yield Configuration.new
   end
+  
+  # filename of the logger
+  def logger_filename=(filename)
+    $logger_filename = filename
+  end
 
   # Pass many strings that will be include in the load path and require
   # all ruby files in the specified dir

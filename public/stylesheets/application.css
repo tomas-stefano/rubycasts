@@ -177,6 +177,12 @@ a:hover{
   overflow: hidden;
 }
 
+h4.comment-title {
+  color: #000000;
+  font: 22px Georgia, serif;
+  margin: 0 0 20px;
+}
+
 #search-form {
   padding: 4px 0 0 0;
 }

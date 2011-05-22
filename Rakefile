@@ -6,7 +6,10 @@ require 'boot'
 
 desc 'Open the Console'
 task :console do
-  system("ruby -I. -S bundle console")
+  require 'irb'
+  require 'boot'
+  ARGV.clear
+  IRB.start
 end
 
 desc 'Bootstrap application with some data (Like db:seed from Rails)'

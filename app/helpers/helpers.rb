@@ -9,12 +9,16 @@ module Helpers
 	end
 	
 	def admin_required!
-	  redirect '/' unless session['github_uid']
+    login_required!
 	  if user = User.get(session['github_uid'])
 	    redirect '/' unless user.admin? or user.token != session['token']
     else
       redirect '/'
     end
+	end
+	
+	def login_required!
+	 	redirect '/' unless session['github_uid']
 	end
 	
 	def show_code(code)
