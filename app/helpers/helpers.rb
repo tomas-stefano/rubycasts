@@ -22,11 +22,16 @@ module Helpers
 	end
 	
 	def show_code(code)
-	  CodeRay.scan(code, :ruby).div # ruby for now TODO: Change to all lang
+	  code = code.strip
+	  CodeRay.scan(code, :ruby).div(:css => :class) # ruby for now TODO: Change to all lang
 	end
 	
 	def gravatar_url(comment)
-	 default_url = "http://gravatar.com/avatar/#{comment.user.gravatar_id}.png"
+	 "http://gravatar.com/avatar/#{comment.user.gravatar_id}.png"
+	end
+	
+	def show_notes(notes)
+	 Redcarpet.new(notes, :filter_html, :hard_wrap, :autolink).to_html
 	end
 
 end

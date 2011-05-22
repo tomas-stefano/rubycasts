@@ -1,5 +1,5 @@
 #current-episode
-  %div.current-episode-content
+  %div{ :class => "current-episode-content whitebox"}
     #episode-title
       %h2
         %a{ :href => "/episodes/#{@episode.id}" }
@@ -7,7 +7,9 @@
     #episode-description
       %p
         = @episode.description
-    %div.CodeRay
-      = show_code(@episode.code)
+    #notes
+      %h2 Links
+      %p
+        = show_notes(@episode.notes)
 
   = partial :player, :locals => {:episode => @episode}

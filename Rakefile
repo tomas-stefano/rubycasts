@@ -22,7 +22,7 @@ task :bootstrap do
                   :video_ogg_uri => "http://video-js.zencoder.com/oceans-clip.ogg",
                   :video_webm_uri => "http://video-js.zencoder.com/oceans-clip.webm",
                   :duration => "3:40",
-                  :code => 'class RubyCasts def initialize end end',
+                  :notes => "Aidmock source: [https://github.com/wilkerlucio/aidmock](https://github.com/wilkerlucio/aidmock)\nEpisode source: [http://github.com/tomas-stefano/](http://github.com/tomas-stefano/)",
                   :image => 'some_image',
                   :comments => comments
 
@@ -33,7 +33,7 @@ task :bootstrap do
                   :video_ogg_uri => "http://video-js.zencoder.com/oceans-clip.ogg",
                   :video_webm_uri => "http://video-js.zencoder.com/oceans-clip.webm",
                   :duration => "2:40",
-                  :code => 'class RubyCasts def initialize @rubycasts = :rubycasts end end',
+                  :notes => "Aidmock source: [https://github.com/wilkerlucio/aidmock](https://github.com/wilkerlucio/aidmock)\nEpisode source: [http://github.com/tomas-stefano/](http://github.com/tomas-stefano/)",
                   :image => 'some_image',
                   :comments => comments
 end

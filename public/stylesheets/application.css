@@ -119,21 +119,29 @@ a:hover{
 .current-episode-content {
   left: 820px;
   position: absolute;
-  top: 230px;
-  width: 435px;
+  top: 210px;
+  width: 405px;
 }
 
 .current-episode-content a {
   color: #b61600;
 }
 
-#episode-title h2 {
+.current-episode-content h2 {
   color: #414D5D;
   font-size: 25px;
 }
 
 .episode-content p {
   color: #414D5D;
+}
+
+#notes, #episode-description {
+  padding: 10px;
+}
+
+#notes h2 {
+  padding-bottom: 5px;
 }
 
 #information-box {

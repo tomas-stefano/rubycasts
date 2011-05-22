@@ -16,6 +16,7 @@ gem 'database_cleaner'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'omniauth'
 gem 'sass'
+gem 'redcarpet'
 gem 'coderay'
 
 group :test do

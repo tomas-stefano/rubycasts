@@ -48,13 +48,17 @@ describe Episode do
       episode.errors.on(:image).should_not be_nil
     end
     
+    it 'notes should be required' do
+      episode.errors.on(:notes).should_not be_nil
+    end
+    
   end
   
   def create_episode(options={})
     Episode.create({
       :title => 'RubyCasts Intro',
       :description => 'Intro how to do a Sinatra app',
-      :code => 'def rubycasts\n end',
+      :notes => 'http://github.com/tomas-stefano',
       :duration => '5:50',
       :video_mp4_uri  => 'http',
       :video_webm_uri => 'http',

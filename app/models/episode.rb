@@ -7,7 +7,7 @@ class Episode
   property :title, String,     :length => 255, :required => true
   property :description, Text, :length => 255, :required => true, :lazy => false
   property :duration, String,  :required => true
-  property :code, String, :required => true, :length => 255
+  property :notes, String, :required => true, :length => 255
   property :image, String, :required => true, :length => 255
   
   # URI for video encoding
