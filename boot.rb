@@ -25,5 +25,6 @@ Configuration.config do |config|
      :adapter  => database['adapter'],
      :host     => database['host'],
      :database => database['name'],
+     :username => database['username'],
      :password => database['password']})
 end
