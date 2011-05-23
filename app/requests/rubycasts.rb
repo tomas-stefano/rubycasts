@@ -52,7 +52,7 @@ class RubyCasts
           @episodes.each do |episode|
             xml.item do
               xml.title episode.title
-              xml.link "Episódio #{episode.id} - http://rubycasts.com.br/episodes/#{episode.id}"
+              xml.link "http://rubycasts.com.br/episodes/#{episode.id}"
               xml.description episode.description
               xml.guid "http://rubycasts.com.br/episodes/#{episode.id}"
             end
