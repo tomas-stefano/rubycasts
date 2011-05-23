@@ -109,7 +109,7 @@ a:hover{
 #current-episode {
   display: block;
   overflow: hidden;
-  margin-bottom: 45px;
+  margin-bottom: 5px;
   padding-bottom: 45px;
 }
 
@@ -251,7 +251,7 @@ h4.comment-title, .member h4 {
 #footer {
   color: #fff;
   font-size: 10px;
-  margin-top: 30px;
+/*  margin-top: 30px;*/
   overflow: hidden;
   padding: 10px 0;
 }
