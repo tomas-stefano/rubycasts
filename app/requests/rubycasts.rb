@@ -1,3 +1,5 @@
+# coding: utf-8
+
 require 'omni_auth_requests'
 require 'episodes_requests'
 require 'builder'
