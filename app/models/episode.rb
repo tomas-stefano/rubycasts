@@ -17,7 +17,10 @@ class Episode
   
   property :created_at, DateTime
   property :updated_at, DateTime
-
+  
+  property :created_on, Date
+  property :updated_on, Date
+  
   def self.first_five_in_desc_order
     first(5, :order => :id.desc)
   end

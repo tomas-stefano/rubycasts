@@ -1,5 +1,6 @@
 require 'omni_auth_requests'
 require 'episodes_requests'
+require 'builder'
 
 class RubyCasts
   include OmniAuthRequests
@@ -49,9 +50,8 @@ class RubyCasts
           @episodes.each do |episode|
             xml.item do
               xml.title episode.title
-              xml.link "http://rubycasts.com.br/episodes/#{episode.id}"
+              xml.link "Episódio #{episode.id} - http://rubycasts.com.br/episodes/#{episode.id}"
               xml.description episode.description
-              xml.pubDate Time.parse(episode.created_at.to_s).rfc822()
               xml.guid "http://rubycasts.com.br/episodes/#{episode.id}"
             end
           end
