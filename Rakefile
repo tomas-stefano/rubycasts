@@ -23,7 +23,7 @@ task :bootstrap do
                   :video_webm_uri => "http://video-js.zencoder.com/oceans-clip.webm",
                   :duration => "3:40",
                   :notes => "Aidmock source: [https://github.com/wilkerlucio/aidmock](https://github.com/wilkerlucio/aidmock)\nEpisode source: [http://github.com/tomas-stefano/](http://github.com/tomas-stefano/)",
-                  :image => 'http://dl.dropbox.com/u/4100835/aidmock.png',
+                  :image => 'http://dl.dropbox.com/u/4100835/01_aidmock.png',
                   :comments => comments
 
 
@@ -34,6 +34,6 @@ task :bootstrap do
                   :video_webm_uri => "http://video-js.zencoder.com/oceans-clip.webm",
                   :duration => "2:40",
                   :notes => "Aidmock source: [https://github.com/wilkerlucio/aidmock](https://github.com/wilkerlucio/aidmock)\nEpisode source: [http://github.com/tomas-stefano/](http://github.com/tomas-stefano/)",
-                  :image => 'http://dl.dropbox.com/u/4100835/aidmock.png',
+                  :image => 'http://dl.dropbox.com/u/4100835/01_aidmock.png',
                   :comments => comments
 end

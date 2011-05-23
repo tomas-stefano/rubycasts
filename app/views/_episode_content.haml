@@ -11,5 +11,13 @@
       %h2 Links
       %p
         = show_notes(@episode.notes)
+      %p
+        %span
+          Download do Episódio:
+        %a{:href => @episode.video_ogg_uri} ogg
+        |
+        %a{:href => @episode.video_webm_uri} webm
+        |
+        %a{:href => @episode.video_mp4_uri} mp4
 
   = partial :player, :locals => {:episode => @episode}
