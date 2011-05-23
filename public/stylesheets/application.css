@@ -108,6 +108,7 @@ a:hover{
 
 #current-episode {
   display: block;
+  overflow: hidden;
   margin-bottom: 80px;
   padding-bottom: 45px;
 }
