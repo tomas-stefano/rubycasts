@@ -18,6 +18,7 @@ gem 'omniauth', '0.1.6'
 gem 'redcarpet', '1.13.1'
 gem 'coderay', '0.9.8'
 gem 'webbynode'
+gem 'builder'
 
 group :test do
   gem 'cucumber'
