@@ -121,7 +121,7 @@ a:hover{
   float: right;
   height: 335px;
   top: 210px;
-  width: 348px;
+  width: 300px;
   margin: 20px 0 10px;
 }
 
@@ -148,7 +148,7 @@ a:hover{
 
 #information-box {
   float: left;
-  width: 640px;
+  width: 620px;
 }
 
 .whitebox {
@@ -204,25 +204,36 @@ h4.comment-title, .member h4 {
 }
 
 .gravatar {
-    float: left;
-    line-height: 16px;
-    text-align: right;
-    width: 82px;
+  float: left;
+  line-height: 16px;
+  text-align: right;
+  width: 82px;
 }
 
 .gravatar a {
-	line-height: 20px;
+  line-height: 20px;
 }
 
 .comment-body {
-    background: none repeat scroll 0 0 #EEEEEE;
-    border: 1px solid #C5C9CC;
-    border-radius: 8px 8px 8px 8px;
-    float: right;
-    margin: 4px 4px 0 0;
-    padding: 35px 30px;
-    position: relative;
-    width: 365px;
+  background: none repeat scroll 0 0 #EEEEEE;
+  border: 1px solid #C5C9CC;
+  border-radius: 8px 8px 8px 8px;
+  float: right;
+  margin: 4px 4px 0 0;
+  padding: 35px 30px;
+  position: relative;
+  width: 365px;
+}
+
+#image-link {
+  display: block;
+  float: left;
+  margin: 0 10px 20px 0;
+}
+
+#image-link img {
+  border: 1px solid #CACACA;
+  padding: 4px;
 }
 
 #search-form {

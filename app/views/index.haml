@@ -3,14 +3,16 @@
   - @episode = @episodes.shift
   = partial :episode_content, :locals => {:episode => @episode}
 
-/ #information-box
-/   %div.whitebox
-/     %div.latest
-/       - @episodes.to_a.each do |episode|
-/         %ol{:class => "episode-#{episode.id}"}
-/           %li
-/             %a.episode-link{:href => "/episodes/#{episode.id}"}
-/               = "Episódio #{episode.id} - #{episode.title}"
-/             %p= episode.description
+#information-box
+  %div.whitebox
+    %div.latest
+      - @episodes.to_a.each do |episode|
+        %ol{:class => "episode-#{episode.id}"}
+          %li
+            %a{:id => 'image-link', :href => "/episodes/#{episode.id}"}
+              %img{:src => episode.image, :alt => episode.title, :width => "170", :height => "170"}
+            %a.episode-link{:href => "/episodes/#{episode.id}"}
+              = "##{episode.id} - #{episode.title}"
+            %p= episode.description
 
 / = partial :sidebar
