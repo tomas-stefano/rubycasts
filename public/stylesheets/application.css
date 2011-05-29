@@ -119,8 +119,9 @@ a:hover{
 
 .current-episode-content {
   float: right;
+  height: 335px;
   top: 210px;
-  width: 268px;
+  width: 348px;
   margin: 20px 0 10px;
 }
 

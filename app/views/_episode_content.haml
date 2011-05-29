@@ -3,7 +3,7 @@
     #episode-title
       %h2
         %a{ :href => "/episodes/#{@episode.id}" }
-          = "Episódio #{@episode.id} - #{@episode.title} - #{@episode.duration}"
+          = "##{@episode.id} - #{@episode.title} - #{@episode.duration}"
     #episode-description
       %p
         = @episode.description
