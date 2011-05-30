@@ -27,7 +27,7 @@ task :bootstrap do
                   :comments => comments
 
 
-  Episode.create! :title => "Active Record 3",
+  Episode.create! :title => "Deploy com o Inploy",
                   :description => "The new Active Record query methods in Rails 3 might seem like magic at first. But in this episode I unravel how it works by browsing the Rails 3 source code.",
                   :video_mp4_uri => "http://video-js.zencoder.com/oceans-clip.mp4",
                   :video_ogg_uri => "http://video-js.zencoder.com/oceans-clip.ogg",
