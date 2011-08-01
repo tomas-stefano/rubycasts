@@ -16,6 +16,11 @@ module EpisodesRequests
     end
   end
   
+  get '/episodes' do
+    @episodes = Episode.all
+    haml :episodes
+  end
+  
   get '/episodes/:id' do
     @episode = Episode.get(params[:id])
     redirect '/' unless @episode
