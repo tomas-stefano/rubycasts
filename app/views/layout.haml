@@ -4,7 +4,7 @@
     %meta{:charset => "utf-8"}
     %meta{:name => "description", :content => "Ruby screencasts, com muitos tutoriais, projetos da comunidade e novas idéias."}
     %meta{ :name => "keywords", :content => "ruby, rails, ruby on rails, screencasts, rubycast, rubycasts, dicas, truques, tutoriais, treinamento, treinamentos, podcasts, programação"}
-    %title RubyCasts 
+    %title RubyCasts
     %link{:href => '/stylesheets/reset.css', :rel => 'stylesheet', :media => "screen"}
     %link{:href => '/stylesheets/application.css', :rel => 'stylesheet', :media => "screen"}
     %link{:href => '/stylesheets/player_html_five.css', :rel => 'stylesheet'}
@@ -23,7 +23,7 @@
       #footer
         %div.inner
           %p
-            Copyright ©2011 Rubycasts, an
+            ="Copyright ©#{Date.today.year} Rubycasts, an"
             %a{:href=> "http://github.com/tomas-stefano/rubycasts"} Opensource Project
 
 
@@ -43,10 +43,10 @@
           :javascript
             var uservoiceOptions = {
             key: 'uservoice',
-            host: 'rubycasts.uservoice.com', 
+            host: 'rubycasts.uservoice.com',
             forum: '1',
             alignment: 'left',
-            background_color:'#f00', 
+            background_color:'#f00',
             text_color: 'white',
             hover_color: '#06c',
             lang: 'en',
@@ -59,4 +59,3 @@
             }
             _loadSuper = window.onload;
             window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
-            
